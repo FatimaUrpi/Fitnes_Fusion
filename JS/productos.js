@@ -1,4 +1,3 @@
-// productos.js
 
 // Definir productos en un ámbito global
 var productos = [
@@ -8,18 +7,15 @@ var productos = [
     { imagen: "./img/producto4.jpg", nombre: "POLO BANO KOSMISK DROMMER", precio: "S/. 119.90 PEN" },
     { imagen: "./img/producto5.jpg", nombre: "POLO URoO KOSMISK DROMMER", precio: "S/. 119.90 PEN" },
 ];
-
 document.addEventListener("DOMContentLoaded", function() {
     var productosContainer = document.getElementById("productos-container");
+        
+    // Obtener solo los primeros 4 productos
+    var primerosProductos = productos.slice(0, 4);
 
-    productos.forEach(function(producto, index) {
+    primerosProductos.forEach(function(producto, index) {
         var productoDiv = document.createElement("div");
-        productoDiv.className = "producto";
-
-        // Al hacer clic en un producto, llamará a la función showModalDatos() con el índice del producto
-        productoDiv.onclick = function() {
-            showModalDatos(index);
-        };
+        productoDiv.className = "producto prom"; // Agrega la clase "prom" aquí
 
         var imagen = document.createElement("img");
         imagen.src = producto.imagen;
@@ -31,11 +27,14 @@ document.addEventListener("DOMContentLoaded", function() {
         var precio = document.createElement("p");
         precio.textContent = producto.precio;
 
+        var boton = document.createElement("button");
+        boton.textContent = "COMPRAR"; // Texto del botón
+
         productoDiv.appendChild(imagen);
         productoDiv.appendChild(titulo);
         productoDiv.appendChild(precio);
+        productoDiv.appendChild(boton); // Agrega el botón al producto
 
         productosContainer.appendChild(productoDiv);
     });
 });
-
