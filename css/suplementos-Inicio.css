@@ -1,0 +1,150 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+/* BARRA DE MENÚ */
+.Logo {
+    position: absolute;
+    top: -38px;
+    left: 10px;
+    transition: filter 0.3s ease;
+}
+
+.Logo a img {
+    width: 150px;
+    height: 150px;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    z-index: 9999;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+header nav {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav a {
+    color: black;
+    margin: 0px 30px;
+    text-decoration: none;
+}
+
+main {
+    padding: 0 5rem;
+    
+}
+
+/*Categorias*/
+.top-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.container-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.card-category {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.category-creatina {
+    background-image: url('../img/Creatina-Categoria.jpg');
+    background-position: bottom;
+    background-size: cover;   
+    cursor: pointer;
+}
+.link-category {
+    color: black; /* Color predeterminado para los enlaces */
+    text-decoration: none; /* Quita la subrayado predeterminado */
+}
+
+.link-category:hover {
+    color: black; /* Cambia el color al pasar el cursor */
+}
+
+.link-category:visited {
+    color: black; /* Color para los enlaces visitados */
+}
+
+.category-proteina {
+    background-image: url('../img/Proteina-Categoria.jpg');
+    background-position: bottom;
+    background-size: cover;   
+}
+.category-preEntreno {
+    background-image: url('../img/PreEntreno-Categoria.jpg');
+    background-position: bottom;
+    background-size: cover;   
+}
+.category-vitaminas {
+    background-image: url('../img/Vitaminas-Categoria.jpg');
+    background-position: bottom;
+    background-size: cover;   
+}
+
+.info{
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(178, 178, 178);
+    border-radius: 20px;
+}
+
+.info-img{
+    width: 50%;
+}
+.info-img img{
+    width: 500px;
+    height: 350px;
+}
+.info-txt {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.info-txt h2{
+    font-size: 45px;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.btn-2{
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+}

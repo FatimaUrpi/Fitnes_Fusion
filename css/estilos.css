@@ -136,13 +136,7 @@ nav a {
 .producto h3 {
     font-size: 18px; 
 }
-.producto h3,p{
-    margin-left: 20px;
-}
 
-.producto p {
-    font-size: 14px; 
-}
 
 .productos {
     display: flex;
