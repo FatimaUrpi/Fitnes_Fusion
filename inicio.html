@@ -4,29 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOLOSHOP__polos de buena calidad</title>
+    <title>FITNESS FUSION</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <script src="./JS/productos.js"></script>
+    <script src="./JS/sliders.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="modal-background"></div>
+
+    <!-- HEADER -->
     <header>
         <nav>
-            <label for="" class="Logo">
-                <a href=""><img src="./img/logo1.png" alt=""></a>
-            </label>
-            <a href="index.html">INICIO</a>
-            <a href="ordena.html">ORDENA AQUI</a>
-            <a href="Promociones.html">PROMOCIONES</a>
-            <a href="cotizacion.html">COTIZACIÓN</a>
-            <a href="#" ><img src="" alt=""></a>
-            <a href="#" style="width: 60px; height: 60px;">🛒</a>
-            
+            <a href="" class="Logo"><img src="img/logo1.jpg" alt=""></a>
+            <a href="#">HOMBRES</a>
+            <a href="#">MUJERES</a>
+            <a href="#">SUPLEMENTOS</a>
+            <a href="#">ACCESORIOS</a> 
+            <a href="#" class="user"><img src="img/user.png" alt=""></a>
+            <a href="#" class="carrito"><img src="img/carrito.png" alt=""></a>
         </nav>
-
         <div class="marquee-space"></div>
         <div class="marquee">
             <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
@@ -38,21 +41,92 @@
             <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
             <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
         </div>
-               
     </header>
        
-        <div class="anuncio">
-            <img src="./img/banner1.jpg" alt="">
+    <!-- SLIDER -->
+    <div class="anuncio">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/banner1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/banner2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/banner3.jpg" alt=""></div>
+                <!-- Agrega más slides según sea necesario -->
+            </div>
         </div>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+          <!-- Ropa deportiva -->
+          <section>
+            <h2>Ropa Deportiva</h2>
+            <br>
+            <div class="productos-container" id="productos-container"></div>
+            <br>
+            <button class="buttonSection" id="ver-mas-ropa-btn"> VER MÁS</button>
+            <div class="buttonOpcion" id="opciones-ropa" style="display: none;">
+                <button id="opcion-hombre">Hombre</button>
+                <button id="opcion-mujer">Mujer</button>
+            </div>
+        </section>
+
+        <!-- Suplementos -->
+        <section>
+            <h2>Suplementos</h2>
+            <br>
+            <div class="productos-container" id="suplementos-container"></div>
+            <br>
+            <button class="buttonSection" id="ver-mas-suplementos-btn"> VER MÁS</button>
+            <div class="buttonOpcion" id="opciones-suplementos" style="display: none;">
+                <button id="opcion-pre-entreno">Pre-Entreno</button>
+                <button id="opcion-proteina">Proteína</button>
+                <button id="opcion-vitaminas">Vitaminas</button>
+            </div>
+        </section>
         
-
-        <main>
-        <!-- Después -->
-            <div id="productos-container" class="productos"></div>
-        </main>
+        <!-- Accesorios -->
+        <section>
+            <h2>Accesorios</h2>
+            <div class="productos-container" id="accesorios-container"></div>
+            <button class="buttonSection"> VER MÁS</button>
+        </section>
+    </main>
        
-
-        <footer class="d-flex">
+  <!-- FOOTER -->
+<footer class="d-flex">
+    <div class="footer-content">
+        <div class="footer-columns">
+            <div class="info-atencion footer-column">
+                <h4>Información de Contacto</h4>
+                <ul>
+                    <p>
+                        Dirección: 71 Pennington Lane Vernon Rockville, CT
+                        06066
+                    </p>
+                    <p>Teléfono: 123-456-7890</p>
+                    <p>Fax: 55555300</p>
+                    <p>EmaiL: bakebliss@support.com</p>
+                </ul>
+                <br>
+                <br>
+                <div class="social-icons">
+                    <span class="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </span>
+                    <span class="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <span class="youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </span>
+                    <span class="pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </span>
+                    <span class="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                </div>
+            </div>
             <div class="info-atencion footer-column">
                 <h4>Atención al cliente</h4>
                 <p>Formas de pago</p>
@@ -60,7 +134,6 @@
                 <p>Cambios & Devoluciones</p>
                 <p>Guía de Tallas</p>
             </div>
-    
             <div class="nosotros footer-column">
                 <h4>Nosotros</h4>
                 <p>Quienes somos</p>
@@ -68,13 +141,15 @@
                 <p>Nuestras Tiendas</p>
                 <p>Trabaja con nosotros</p>
             </div>
-        </footer>
-  
+        </div>
 
-  
-
-
-
+        <div class="copyright">
+            <p>
+                Desarrollado por estudiantes de Cibertec - Ciclo 4 &copy; 2023
+            </p> 
+        </div>
+    </div>
+</footer>
 
 
 </body>
