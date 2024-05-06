@@ -1,0 +1,52 @@
+[
+    {
+        "id":1,
+        "name":"POLERA ESTAMPADO DE NINTENDO",
+        "price": 80,
+        "image": "./img/Hombres/poleras_Hombre/polerasHombre1.png"
+
+    },
+    {
+        "id":1,
+        "name":"POLERA ESTAMPADO DE LUNA",
+        "price": 70,
+        "image": "./img/Hombres/poleras_Hombre/polerasHombre2.png"
+    },
+    {
+        "id":1,
+        "name":"POLERA FASES DE LA LUNA",
+        "price": 80,
+        "image": "./img/Hombres/poleras_Hombre/polerasHombre3.png"
+    },
+    {
+        "id":1,
+        "name":"POLERA PINK",
+        "price": 75,
+        "image": "./img/Hombres/poleras_Hombre/polerasHombre4.png"
+    },
+    {
+        "id":1,
+        "name":"POLERA BICOLOR",
+        "price": 85,
+        "image": "./img/Hombres/poleras_Hombre/polerasHombre5.png"
+    },
+    {
+        "id":1,
+        "name":"POLERA ORANGE",
+        "price": 80,
+        "image": "./img/Hombres/poleras_Hombre/polerasHombre6.png"
+    },
+    {
+        "id":1,
+        "name":"POLERA BLUE-BLUE",
+        "price": 90,
+        "image": "./img/Hombres/poleras_Hombre/polerasHombre7.png"
+    },
+    {
+        "id":1,
+        "name":"POLERA GREEN",
+        "price": 75,
+        "image": "./img/Hombres/poleras_Hombre/polerasHombre8.png"
+    }
+
+]
