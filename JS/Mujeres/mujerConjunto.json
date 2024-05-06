@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "name":"CONJUNTO GREEN-WHITE",
+        "price": 150,
+        "image": "./img/Mujeres/conjuntos/conjuntosMujeres1.png"
+    },
+    {
+        "id":1,
+        "name":"CONJUNTO BLANK-LEAD",
+        "price": 110,
+        "image": "./img/Mujeres/conjuntos/conjuntosMujeres2.png"
+    },
+    {
+        "id":1,
+        "name":"CONJUNTO-PINK",
+        "price": 120,
+        "image": "./img/Mujeres/conjuntos/conjuntosMujeres3.png"
+    },
+    {
+        "id":1,
+        "name":"CONJUNTO SKY BLUE",
+        "price": 105,
+        "image": "./img/Mujeres/conjuntos/conjuntosMujeres4.png"
+    },
+    {
+        "id":1,
+        "name":"CONJUNTO WHITE-SEA WATER",
+        "price": 115,
+        "image": "./img/Mujeres/conjuntos/conjuntosMujeres5.png"
+    },
+    {
+        "id":1,
+        "name":"CONJUNTO CLASICO-LEAD",
+        "price": 70,
+        "image": "./img/Mujeres/conjuntos/conjuntosMujeres6.png"
+    },
+    {
+        "id":1,
+        "name":"CONJUNTO GREEN",
+        "price": 80,
+        "image": "./img/Mujeres/conjuntos/conjuntosMujeres7.png"
+    },
+    {
+        "id":1,
+        "name":"CONJUNTO BROWN",
+        "price": 95,
+        "image": "./img/Mujeres/conjuntos/conjuntosMujeres8.png"
+    }
+
+]
