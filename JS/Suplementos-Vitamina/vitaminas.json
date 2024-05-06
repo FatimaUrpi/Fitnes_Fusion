@@ -1,0 +1,57 @@
+[
+    {
+        "id":1,
+        "name":"CALCIUM & MAGNESIUM - MY PROTEIN / 90 TABLETAS",
+        "price": 60,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas1.jpg"
+    },
+    {
+        "id":2,
+        "name":"MAX MARINE OMEGA3",
+        "price": 90,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas2.jpg"
+    },
+    {
+        "id":3,
+        "name":"FISH OIL OMEGA-3",
+        "price": 129,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas3.jpg"
+    },
+    {
+        "id":4,
+        "name":"OXYGOLD",
+        "price": 119,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas4.jpg"
+    },
+    {
+        "id":5,
+        "name":"PLATINUM MULTIVITAMIN",
+        "price": 48,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas5.jpg"
+    },
+    {
+        "id":6,
+        "name":"MYPROTEIN ZINC 90 TABLETAS",
+        "price": 99,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas6.jpg"
+    },
+    {
+        "id":7,
+        "name":"CALCIUM & MAGNESIUM - MY PROTEIN / 90 TABLETAS + MY PROTEIN ZINC 90 TABLETAS",
+        "price": 150,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas7.jpg"
+    },
+    {
+        "id":8,
+        "name":"CALCIUM & MAGNESIUM - MY PROTEIN + MY PROTEIN ZINC 90 TABLETAS + MAX MARINE OMEGA3",
+        "price": 60,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas8.jpg"
+    },
+    {
+        "id":9,
+        "name":"OPTI - MEN",
+        "price": 169,
+        "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas9.jpg"
+    }
+
+]
