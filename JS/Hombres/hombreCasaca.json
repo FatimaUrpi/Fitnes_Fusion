@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "name":"CASACA NEGRA",
+        "price": 190,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre1.png"
+    },
+    {
+        "id":1,
+        "name":"CASACA PLOMA",
+        "price": 80,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre2.png"
+    },
+    {
+        "id":1,
+        "name":"CASACA NEGRA CON DOS LINEAS",
+        "price": 90,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre3.png"
+    },
+    {
+        "id":1,
+        "name":"CASACA BICOLOR",
+        "price": 95,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre4.png"
+    },
+    {
+        "id":1,
+        "name":"CASACA BLANCA",
+        "price": 85,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre5.png"
+    },
+    {
+        "id":1,
+        "name":"CACASA TRICOLOR",
+        "price": 70,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre6.png"
+    },
+    {
+        "id":1,
+        "name":"CASACA ESTAMPADO TROPICAL",
+        "price": 80,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre7.png"
+    },
+    {
+        "id":1,
+        "name":"CASACA NEUTRO",
+        "price": 95,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre8.png"
+    }
+
+]
