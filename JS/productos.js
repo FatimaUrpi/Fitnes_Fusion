@@ -1,14 +1,49 @@
 // Definir productos en un ámbito global
 var productos = [
-    { imagen: "./img/producto1.jpg", nombre: "POLO URBANO KOSMISK DROMMER", precio: "S/. 119.90 PEN" },
-    { imagen: "./img/producto2.jpg", nombre: "POLO URO KOSMISK DROMMER", precio: "S/. 119.90 PEN" },
-    { imagen: "./img/producto3.jpg", nombre: "POLO ALLO KOSMISK DROMMER", precio: "S/. 119.90 PEN" },
-    { imagen: "./img/producto4.jpg", nombre: "POLO BANO KOSMISK DROMMER", precio: "S/. 119.90 PEN" },
-    { imagen: "./img/producto5.jpg", nombre: "POLO URoO KOSMISK DROMMER", precio: "S/. 119.90 PEN" },
+    { imagen: "./img/producto1.jpg", nombre: "POLO URBANO KOSMISK DROMMER", precio: "S/. 119.90 PEN", categoria: "ropa" },
+    { imagen: "./img/producto2.jpg", nombre: "POLO URO KOSMISK DROMMER", precio: "S/. 119.90 PEN", categoria: "ropa" },
+    { imagen: "./img/producto3.jpg", nombre: "POLO ALLO KOSMISK DROMMER", precio: "S/. 119.90 PEN", categoria: "ropa" },
+    { imagen: "./img/producto4.jpg", nombre: "POLO BANO KOSMISK DROMMER", precio: "S/. 119.90 PEN", categoria: "ropa" },
+    { imagen: "./img/producto5.jpg", nombre: "POLO URoO KOSMISK DROMMER", precio: "S/. 119.90 PEN", categoria: "ropa" },
 ];
 
+// Función para obtener los productos del carrito almacenados en el almacenamiento local
+function obtenerCarrito() {
+    var carritoJSON = localStorage.getItem("carrito");
+    return carritoJSON ? JSON.parse(carritoJSON) : [];
+}
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(producto) {
+    // Obtener el carrito actual
+    var carrito = obtenerCarrito();
+    // Agregar el producto al carrito
+    carrito.push(producto);
+    // Actualizar el almacenamiento local con el nuevo carrito
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    // Actualizar la visualización del carrito en el HTML
+    actualizarCarritoHTML();
+}
+
+// Función para actualizar la visualización del carrito en el HTML
+function actualizarCarritoHTML() {
+    // Obtener los productos del carrito desde el almacenamiento local
+    var carrito = obtenerCarrito();
+    // Seleccionar el elemento del carrito en el HTML
+    var carritoElemento = document.getElementById("carrito-lista");
+    // Limpiar el contenido anterior del carrito
+    carritoElemento.innerHTML = "";
+    // Iterar sobre los productos en el carrito y agregarlos al HTML
+    carrito.forEach(function(producto) {
+        // Crear un elemento de lista para cada producto en el carrito
+        var productoElemento = document.createElement("li");
+        productoElemento.textContent = producto.nombre + " - " + producto.precio;
+        // Agregar el elemento de lista al carrito en el HTML
+        carritoElemento.appendChild(productoElemento);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Función para mostrar las opciones y ocultar el botón "VER MÁS" para ropa deportiva
     function mostrarOpcionesRopaOcultarVerMas() {
         var opcionesRopa = document.getElementById("opciones-ropa");
         var verMasRopaBtn = document.getElementById("ver-mas-ropa-btn");
@@ -16,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
         verMasRopaBtn.style.display = "none"; // Oculta el botón "VER MÁS"
     }
 
-    // Función para ocultar las opciones y mostrar el botón "VER MÁS" para ropa deportiva
     function ocultarOpcionesRopaMostrarVerMas() {
         var opcionesRopa = document.getElementById("opciones-ropa");
         var verMasRopaBtn = document.getElementById("ver-mas-ropa-btn");
@@ -24,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
         verMasRopaBtn.style.display = "block"; // Muestra el botón "VER MÁS"
     }
 
-    // Botón "VER MÁS" para ropa deportiva
     document.getElementById("ver-mas-ropa-btn").addEventListener("click", function() {
         var opcionesRopa = document.getElementById("opciones-ropa");
         if (opcionesRopa.style.display === "none" || opcionesRopa.style.display === "") {
@@ -35,11 +68,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Selección de los botones de opción para ropa deportiva
     var botonOpcionHombre = document.getElementById("opcion-hombre");
     var botonOpcionMujer = document.getElementById("opcion-mujer");
 
-    // Asignación de evento de clic a cada botón de opción para ropa deportiva
     botonOpcionHombre.addEventListener("click", function() {
         // Lógica para manejar la selección de "Hombre"
         ocultarOpcionesRopaMostrarVerMas(); // Ocultar opciones y mostrar "VER MÁS"
@@ -50,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
         ocultarOpcionesRopaMostrarVerMas(); // Ocultar opciones y mostrar "VER MÁS"
     });
 
-    // Función para mostrar las opciones y ocultar el botón "VER MÁS" para suplementos
     function mostrarOpcionesSuplementosOcultarVerMas() {
         var opcionesSuplementos = document.getElementById("opciones-suplementos");
         var verMasSuplementosBtn = document.getElementById("ver-mas-suplementos-btn");
@@ -58,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
         verMasSuplementosBtn.style.display = "none"; // Oculta el botón "VER MÁS"
     }
 
-    // Función para ocultar las opciones y mostrar el botón "VER MÁS" para suplementos
     function ocultarOpcionesSuplementosMostrarVerMas() {
         var opcionesSuplementos = document.getElementById("opciones-suplementos");
         var verMasSuplementosBtn = document.getElementById("ver-mas-suplementos-btn");
@@ -66,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function() {
         verMasSuplementosBtn.style.display = "block"; // Muestra el botón "VER MÁS"
     }
 
-    // Botón "VER MÁS" para suplementos
     document.getElementById("ver-mas-suplementos-btn").addEventListener("click", function() {
         var opcionesSuplementos = document.getElementById("opciones-suplementos");
         if (opcionesSuplementos.style.display === "none" || opcionesSuplementos.style.display === "") {
@@ -77,39 +105,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Selección de los botones de opción para suplementos
-    var botonOpcionPreEntreno = document.getElementById("opcion-pre-entreno");
-    var botonOpcionProteina = document.getElementById("opcion-proteina");
-    var botonOpcionVitaminas = document.getElementById("opcion-vitaminas");
-
-   // Asignación de evento de clic a cada botón de opción para ropa deportiva
-    botonOpcionHombre.addEventListener("click", function() {
-        // Redireccionar a la página correspondiente para hombres
-        window.location.href = "https://www.ejemplo.com/hombres";
-    });
-
-    botonOpcionMujer.addEventListener("click", function() {
-        // Redireccionar a la página correspondiente para mujeres
-        window.location.href = "https://www.ejemplo.com/mujeres";
-    });
-
-    // Asignación de evento de clic a cada botón de opción para suplementos
-    botonOpcionPreEntreno.addEventListener("click", function() {
-        // Redireccionar a la página correspondiente para pre-entrenos
-        window.location.href = "https://www.ejemplo.com/pre-entreno";
-    });
-
-    botonOpcionProteina.addEventListener("click", function() {
-        // Redireccionar a la página correspondiente para proteínas
-        window.location.href = "https://www.ejemplo.com/proteina";
-    });
-
-    botonOpcionVitaminas.addEventListener("click", function() {
-        // Redireccionar a la página correspondiente para vitaminas
-        window.location.href = "https://www.ejemplo.com/vitaminas";
-    });
-
-    // Tiempo para volver a mostrar el botón "VER MÁS" si no se selecciona ninguna opción para ropa deportiva
     var tiempoLimiteRopa = 5000; // 5 segundos
     var timerRopa;
 
@@ -120,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }, tiempoLimiteRopa);
     }
 
-    // Tiempo para volver a mostrar el botón "VER MÁS" si no se selecciona ninguna opción para suplementos
     var tiempoLimiteSuplementos = 5000; // 5 segundos
     var timerSuplementos;
 
@@ -131,19 +125,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }, tiempoLimiteSuplementos);
     }
 
-    // Reiniciar el temporizador cada vez que se haga clic en el botón "VER MÁS" para ropa deportiva
     document.getElementById("ver-mas-ropa-btn").addEventListener("click", reiniciarTimerRopa);
-
-    // Reiniciar el temporizador cada vez que se haga clic en el botón "VER MÁS" para suplementos
     document.getElementById("ver-mas-suplementos-btn").addEventListener("click", reiniciarTimerSuplementos);
 
-    // Función para mostrar los productos
-    function mostrarProductos() {
-        var contenedorProductos = document.getElementById("productos-container");
-        // Obtener solo los primeros 4 productos
-        var primerosProductos = productos.slice(0, 4);
+    function mostrarProductos(contenedorId, categoria) {
+        var contenedorProductos = document.getElementById(contenedorId);
+        var productosCategoria = productos.filter(function(producto) {
+            return producto.categoria === categoria;
+        });
 
-        primerosProductos.forEach(function(producto) {
+        var productosMostrados = productosCategoria.slice(0, 4);
+
+        productosMostrados.forEach(function(producto) {
             var productoDiv = document.createElement("div");
             productoDiv.className = "producto";
 
@@ -157,14 +150,26 @@ document.addEventListener("DOMContentLoaded", function() {
             var precio = document.createElement("p");
             precio.textContent = producto.precio;
 
+            var botonAgregar = document.createElement("button");
+            botonAgregar.textContent = "Agregar al carrito";
+            botonAgregar.className = "agregar-carrito";
+            botonAgregar.addEventListener("click", function() {
+                agregarAlCarrito(producto); // Llama a la función agregarAlCarrito con el producto correspondiente
+            });
+
             productoDiv.appendChild(imagen);
             productoDiv.appendChild(titulo);
             productoDiv.appendChild(precio);
+            productoDiv.appendChild(botonAgregar);
 
             contenedorProductos.appendChild(productoDiv);
         });
     }
 
-    // Llamar a la función para mostrar los productos
-    mostrarProductos();
+    mostrarProductos("ropa-container", "ropa");
+    mostrarProductos("suplementos-container", "suplementos");
+    mostrarProductos("accesorios-container", "accesorios");
+
+    // Llamar a actualizarCarritoHTML cuando se cargue la página
+    actualizarCarritoHTML();
 });
