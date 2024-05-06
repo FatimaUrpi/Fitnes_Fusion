@@ -25,11 +25,20 @@
             <a href="inicio.html" class="Logo"><img src="img/logo1.jpg" alt=""></a>
             <a href="hombres.html">HOMBRES</a>
             <a href="#">MUJERES</a>
-            <a href="suplementos-Inicio.html">SUPLEMENTOS</a>
+            <div class="dropdown">
+                <a href="suplementos-Inicio.html" class="dropbtn">SUPLEMENTOS</button>
+                <div class="dropdown-content">
+                    <a href="suplementos-Creatina.html">Creatina</a>
+                    <a href="suplementos-PreEntreno.html">PreEntreno</a>
+                    <a href="suplementos-Proteina.html">Proteína</a>
+                    <a href="suplementos-Vitaminas.html">Vitaminas</a>
+                </div>
+            </div>
             <a href="#">ACCESORIOS</a> 
             <a href="#" class="user"><img src="img/user.png" alt=""></a>
-            <a href="#" class="carrito"><img src="img/carrito.png" alt=""></a>
+            <a href="carrito.html" class="carrito"><img src="img/carrito.png" alt=""></a>
         </nav>
+        
         <div class="marquee-space"></div>
         <div class="marquee">
             <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
@@ -56,12 +65,12 @@
     </div>
 
     <!-- MAIN -->
-    <main>
-          <!-- Ropa deportiva -->
-          <section>
+      <main>
+        <!-- Ropa deportiva -->
+        <section>
             <h2>Ropa Deportiva</h2>
             <br>
-            <div class="productos-container" id="productos-container"></div>
+            <div class="productos-container" id="ropa-container"></div>
             <br>
             <button class="buttonSection" id="ver-mas-ropa-btn"> VER MÁS</button>
             <div class="buttonOpcion" id="opciones-ropa" style="display: none;">
@@ -78,6 +87,7 @@
             <br>
             <button class="buttonSection" id="ver-mas-suplementos-btn"> VER MÁS</button>
             <div class="buttonOpcion" id="opciones-suplementos" style="display: none;">
+                <button id="opcion-creatina">Creatina</button>
                 <button id="opcion-pre-entreno">Pre-Entreno</button>
                 <button id="opcion-proteina">Proteína</button>
                 <button id="opcion-vitaminas">Vitaminas</button>
@@ -91,7 +101,6 @@
             <button class="buttonSection"> VER MÁS</button>
         </section>
     </main>
-       
   <!-- FOOTER -->
 <footer class="d-flex">
     <div class="footer-content">
