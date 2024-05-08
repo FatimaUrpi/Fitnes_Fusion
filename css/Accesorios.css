@@ -212,36 +212,36 @@ footer {
     font-weight: 400;
     font-size: 1.2rem; 
 }
-/*listVitamina*/
 
-.listVitamina .item img {
+
+.listAccesorios .item img {
     width: 100%;
-    filter: drop-shadow(0 50px 20px #0009);
+    filter: drop-shadow(0 50px 20px rgba(150, 149, 149, 0.6));
 }
 
-.listVitamina{
+.listAccesorios{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
-.listVitamina .item {
+.listAccesorios .item {
     background-color: #eeeee6;
     padding: 20px;
     border-radius: 20px;
     align-items: center;
     text-align: center;
 }
-.listVitamina .item h2 {
+.listAccesorios .item h2 {
     font-weight: 500;
     font-size: large;
 }
 
-.listVitamina .item .price{
+.listAccesorios .item .price{
     letter-spacing: 7px;
     font-size: small;
 }
 
-.listVitamina .item button{
+.listAccesorios .item button{
     background-color: #353432;
     color: #eee;
     padding: 5px 10px;
@@ -250,7 +250,7 @@ footer {
     border: none;
 }
 
-.vitamina {
+.accesorios {
     margin: 50px 30px;
 }
 
