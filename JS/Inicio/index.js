@@ -63,13 +63,14 @@ const initAppSuplementos = () => {
 }
 initAppSuplementos();
 
+
 let listAccesoriosHTML = document.querySelector('.listAccesorios');
 let listAccesorios = [];
 
 const addDataHTMLAccesorios = () => {
     listAccesoriosHTML.innerHTML = '';
     if (listAccesorios.length > 0) {
-        listAccesorios.slice(0, 4).forEach(product => {
+        listAccesorios.forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.classList.add('item');
             newProduct.innerHTML = `
@@ -90,119 +91,37 @@ const initAppAccesorios = () => {
             addDataHTMLAccesorios();
         })
 }
-initAppAccesorios();
 
-var closeButton = document.querySelector('.close-button');
-if (closeButton !== null) {
-  closeButton.addEventListener('click', function() {
-    // Código para cerrar el carrito
-  });
+initAppConjuntos();
+
+/*INDEX ACCESORIOS*/
+
+let listAccesoriosIHTML = document.querySelector('.listAccesoriosI');
+let listAccesoriosI = [];
+
+const addDataHTMLConjuntosI = () => {
+    listAccesoriosIHTML.innerHTML = '';
+    if (listAccesoriosI.length > 0) {
+        listAccesoriosI.slice(0, 4).forEach(productI => {
+            let newProduct = document.createElement('div');
+            newProduct.classList.add('item');
+            newProduct.innerHTML = `
+            <img src="${productI.image}" alt="">
+            <h2>${productI.name}</h2>
+            <div class="price">S/.${productI.price}</div>
+            <button class="addCard">Comprar</button>`;
+            listAccesoriosIHTML.appendChild(newProduct);
+        });
+    }
 }
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    function mostrarOpcionesRopaOcultarVerMas() {
-        var opcionesRopa = document.getElementById("opciones-ropa");
-        var verMasRopaBtn = document.getElementById("ver-mas-ropa-btn");
-        opcionesRopa.style.display = "block";
-        verMasRopaBtn.style.display = "none";
-    }
-
-    function ocultarOpcionesRopaMostrarVerMas() {
-        var opcionesRopa = document.getElementById("opciones-ropa");
-        var verMasRopaBtn = document.getElementById("ver-mas-ropa-btn");
-        opcionesRopa.style.display = "none";
-        verMasRopaBtn.style.display = "block";
-    }
-
-    document.getElementById("ver-mas-ropa-btn").addEventListener("click", function() {
-        var opcionesRopa = document.getElementById("opciones-ropa");
-        if (opcionesRopa.style.display === "none" || opcionesRopa.style.display === "") {
-            mostrarOpcionesRopaOcultarVerMas();
-            reiniciarTimerRopa();
-        } else {
-            ocultarOpcionesRopaMostrarVerMas();
-        }
-    });
-
-    var botonOpcionHombre = document.getElementById("opcion-hombre");
-    var botonOpcionMujer = document.getElementById("opcion-mujer");
-
-    botonOpcionHombre.addEventListener("click", function() {
-        ocultarOpcionesRopaMostrarVerMas();
-    });
-
-    botonOpcionMujer.addEventListener("click", function() {
-        ocultarOpcionesRopaMostrarVerMas();
-    });
-
-    function mostrarOpcionesSuplementosOcultarVerMas() {
-        var opcionesSuplementos = document.getElementById("opciones-suplementos");
-        var verMasSuplementosBtn = document.getElementById("ver-mas-suplementos-btn");
-        opcionesSuplementos.style.display = "block";
-        verMasSuplementosBtn.style.display = "none";
-    }
-
-    function ocultarOpcionesSuplementosMostrarVerMas() {
-        var opcionesSuplementos = document.getElementById("opciones-suplementos");
-        var verMasSuplementosBtn = document.getElementById("ver-mas-suplementos-btn");
-        opcionesSuplementos.style.display = "none";
-        verMasSuplementosBtn.style.display = "block";
-    }
-
-    document.getElementById("ver-mas-suplementos-btn").addEventListener("click", function() {
-        var opcionesSuplementos = document.getElementById("opciones-suplementos");
-        if (opcionesSuplementos.style.display === "none" || opcionesSuplementos.style.display === "") {
-            mostrarOpcionesSuplementosOcultarVerMas();
-            reiniciarTimerSuplementos();
-        } else {
-            ocultarOpcionesSuplementosMostrarVerMas();
-        }
-    });
-
-    var tiempoLimiteRopa = 5000; 
-    var timerRopa;
-
-    function reiniciarTimerRopa() {
-        clearTimeout(timerRopa); 
-        timerRopa = setTimeout(function() {
-            ocultarOpcionesRopaMostrarVerMas();
-        }, tiempoLimiteRopa);
-    }
-
-    var tiempoLimiteSuplementos = 5000; 
-    var timerSuplementos;
-
-    function reiniciarTimerSuplementos() {
-        clearTimeout(timerSuplementos); 
-        timerSuplementos = setTimeout(function() {
-            ocultarOpcionesSuplementosMostrarVerMas();
-        }, tiempoLimiteSuplementos);
-    }
-
-    document.getElementById("ver-mas-ropa-btn").addEventListener("click", reiniciarTimerRopa);
-    document.getElementById("ver-mas-suplementos-btn").addEventListener("click", reiniciarTimerSuplementos);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const initAppConjuntosI = () => {
+    fetch('./JS/inicio/productos.json')
+        .then(response => response.json())
+        .then(data => {
+            listAccesoriosI = data.filter(product => product.categoria === "Accesorios");
+            addDataHTMLConjuntosI();
+        })
+}
+initAppConjuntosI();
 
