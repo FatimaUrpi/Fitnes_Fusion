@@ -10,56 +10,6 @@ section {
         border-top: 3px solid #ccc;
         padding: 20px;
     }
-.buttonSection {
-    width: 120px;
-    height: 40px;
-    background-color: #000; 
-    color: #fff; 
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto; 
-}
-
-.buttonSection:hover {
-    background-color: #333; 
-}
-#opciones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.buttonOpcion {
-    width: 100%;
-    text-align: center;
-    
-}
-
-.buttonOpcion button {
-    margin: 5px;
-    padding: 10px 20px;
-    width: auto;
-    height: 40px;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 2rem;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-
-.ver-mas-btn:hover {
-    background-color: var(--background-color);
-    color: var(--primary-color);
-}
-
 
 /* SLIDER*/
 .anuncio {

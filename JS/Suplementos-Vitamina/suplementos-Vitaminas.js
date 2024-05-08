@@ -5,6 +5,9 @@ let listVitamina = [];
 
 const addDataHTMLVitamina= () =>{
     listVitaminaHTML.innerHTML = '';
+    const tipos = ['Vitamina'];
+    tipos.forEach(tipo => {
+    const productosTipo = listVitamina.filter(producto => producto.tipo === tipo);
     if(listVitamina.length > 0){
         listVitamina.forEach(vitaminas =>{
             let newVitamina = document.createElement('div');
@@ -15,15 +18,15 @@ const addDataHTMLVitamina= () =>{
             <div class="price">S/.${vitaminas.price}</div>
             <button class="addCard">Comprar</button>`;
             listVitaminaHTML.appendChild(newVitamina);
-        })
-
+        });
     }
+});
 }
 const initAppVitamina = () => {
-    fetch('JS/Suplementos-Vitamina/vitaminas.json')
+    fetch('./JS/inicio/productos.json')
         .then(response => response.json())
         .then(data => {
-            listVitamina = data;
+            listVitamina = data.filter(producto => producto.categoria === "Suplementos" && producto.tipo === "Vitamina");
             addDataHTMLVitamina();
         })
 }
