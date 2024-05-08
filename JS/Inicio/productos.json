@@ -482,6 +482,84 @@
                 "categoria": "Suplementos",
                 "tipo": "Vitamina"
             }
+            ,
+            {
+                "id": 61,
+                "name": "Pulsera de GYM",
+                "price": 10,
+                "image": "./img/Accesorios/accesorios1.jpg",
+                "categoria": "Accesorios",
+                "tipo": "Pulsera"
+            }
+            ,
+            {
+                "id": 62,
+                "name": "Collar con Forma de Disco de GYM",
+                "price": 15,
+                "image": "./img/Accesorios/accesorios2.jpg",
+                "categoria": "Accesorios",
+                "tipo": "collar"
+            },
+            {
+                "id": 63,
+                "name": "Collar con Forma de Mancuerna de GYM",
+                "price": 15,
+                "image": "./img/Accesorios/accesorios3.jpg",
+                "categoria": "Accesorios",
+                "tipo": "collar"
+            },
+            {
+                "id": 64,
+                "name": "Straps para levatamineto pesado",
+                "price": 10,
+                "image": "./img/Accesorios/accesorios4.jpg",
+                "categoria": "Accesorios",
+                "tipo": "Pulsera"
+            },
+            {
+                "id": 65,
+                "name": "Neck Shoulders",
+                "price": 30,
+                "image": "./img/Accesorios/accesorios5.jpg",
+                "categoria": "Accesorios",
+                "tipo": "Almuadillas"
+            }
+            ,
+            {
+                "id": 66,
+                "name": "Muñequeras",
+                "price": 35,
+                "image": "./img/Accesorios/accesorios6.jpg",
+                "categoria": "Accesorios",
+                "tipo": "Muñequera"
+            }
+            ,
+            {
+                "id": 67,
+                "name": "Muñequeras con Diseño Animado",
+                "price": 50,
+                "image": "./img/Accesorios/accesorios7.jpg",
+                "categoria": "Accesorios",
+                "tipo": "Muñequera"
+            },
+            {
+                "id": 68,
+                "name": "Cinturon de cuero para GYM",
+                "price": 99,
+                "image": "./img/Accesorios/accesorios8.jpg",
+                "categoria": "Accesorios",
+                "tipo": "Cinturon"
+            }
+            ,
+            {
+                "id": 69,
+                "name": "Cinturon con Diseño de cuero de GYM",
+                "price": 180,
+                "image": "./img/Accesorios/accesorios9.jpg",
+                "categoria": "Accesorios",
+                "tipo": "Cinturon"
+            }
+            
 ]
 
 

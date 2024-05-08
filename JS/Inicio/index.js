@@ -63,7 +63,7 @@ const initAppSuplementos = () => {
 }
 initAppSuplementos();
 
-/*CONJUNTOS*/
+/*ACCESORIOS*/
 
 let listAccesoriosHTML = document.querySelector('.listAccesorios');
 let listAccesorios = [];
@@ -71,7 +71,7 @@ let listAccesorios = [];
 const addDataHTMLConjuntos = () => {
     listAccesoriosHTML.innerHTML = '';
     if (listAccesorios.length > 0) {
-        listAccesorios.slice(0, 4).forEach(product => {
+        listAccesorios.forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.classList.add('item');
             newProduct.innerHTML = `
@@ -93,3 +93,34 @@ const initAppConjuntos = () => {
         })
 }
 initAppConjuntos();
+
+/*INDEX ACCESORIOS*/
+
+let listAccesoriosIHTML = document.querySelector('.listAccesoriosI');
+let listAccesoriosI = [];
+
+const addDataHTMLConjuntosI = () => {
+    listAccesoriosIHTML.innerHTML = '';
+    if (listAccesoriosI.length > 0) {
+        listAccesoriosI.slice(0, 4).forEach(productI => {
+            let newProduct = document.createElement('div');
+            newProduct.classList.add('item');
+            newProduct.innerHTML = `
+            <img src="${productI.image}" alt="">
+            <h2>${productI.name}</h2>
+            <div class="price">S/.${productI.price}</div>
+            <button class="addCard">Comprar</button>`;
+            listAccesoriosIHTML.appendChild(newProduct);
+        });
+    }
+}
+
+const initAppConjuntosI = () => {
+    fetch('./JS/inicio/productos.json')
+        .then(response => response.json())
+        .then(data => {
+            listAccesoriosI = data.filter(product => product.categoria === "Accesorios");
+            addDataHTMLConjuntosI();
+        })
+}
+initAppConjuntosI();
