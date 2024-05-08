@@ -1,0 +1,114 @@
+
+
+.listRopaDeportiva .item img {
+    width: 100%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+.listRopaDeportiva{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.listRopaDeportiva .item {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.listRopaDeportiva .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listRopaDeportiva .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+.listRopaDeportiva .item button{
+    background-color: #353432;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+}
+
+
+/*CASACAS*/
+.listSuplementos .item img {
+    width: 100%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+.listSuplementos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.listSuplementos .item {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.listSuplementos .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listSuplementos .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+.listSuplementos .item button{
+    background-color: #353432;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+}
+
+/*CONJUNTOS*/
+.listAccesorios .item img {
+    width: 100%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+.listAccesorios{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.listAccesorios .item {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.listAccesorios .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listAccesorios .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+.listAccesorios .item button{
+    background-color: #353432;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+}
+
+

@@ -1,36 +1,65 @@
-/*productos.css*/
-/* Estilos para la clase .producto */
 
 h2{
     text-align: center;
-    margin-bottom: 50px; /* Ajusta el espacio hacia abajo según sea necesario */
-
+    margin-bottom: 50px; 
     }
 
 section {
-        border-left: 3px solid #ccc; /* Borde en el lado izquierdo */
-        border-right: 3px solid #ccc; /* Borde en el lado derecho */
-        border-top: 3px solid #ccc; /* Borde en la parte superior */
-        
-        padding: 20px; /* Agrega un espacio interno de 20px alrededor del contenido de cada sección */
-}
+        border-left: 3px solid #ccc;
+        border-right: 3px solid #ccc;
+        border-top: 3px solid #ccc;
+        padding: 20px;
+    }
 .buttonSection {
     width: 120px;
     height: 40px;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+    background-color: #000; 
+    color: #fff; 
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     display: block;
-    margin: 0 auto; /* Para centrar horizontalmente */
+    margin: 0 auto; 
 }
 
 .buttonSection:hover {
-    background-color: #333; /* Cambio de color al pasar el cursor */
+    background-color: #333; 
 }
-  
+#opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonOpcion {
+    width: 100%;
+    text-align: center;
+    
+}
+
+.buttonOpcion button {
+    margin: 5px;
+    padding: 10px 20px;
+    width: auto;
+    height: 40px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.ver-mas-btn:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
 
 /* SLIDER*/
 .anuncio {
@@ -45,72 +74,55 @@ section {
     width: 100%;
     height: 520px;
 }
-    
-.producto.prom {
-    margin-top: 20px;
-    width: 20%; /* Ajusta el ancho de cada producto para que haya espacio para 4 en una fila */
-    height: 420px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 15px 0.5%; /* Ajusta el margen lateral */
-    text-align: center;
-    transition: all 0.25s;
-    border-style: groove;
-    border-color: #000000;
-}
 
-.producto.prom:last-child {
-    margin-right: 10px; /* Ajusta el margen derecho del último producto para evitar desbordamiento */
-}
-
+ /* Estilos para cada producto */
 .productos-container {
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
-    justify-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .producto {
-    width: calc(30% - 20px); /* 25% del ancho total menos el espacio entre los productos */
-    margin-bottom: 20px;
-}
-
-.producto.prom img {
-    width: auto;
+    width: calc(23% - 20px);
     height: auto;
-    margin-top: 20px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
 }
 
-.producto.prom h3 {
-    font-size: 20px;
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.producto h3 {
+    font-size: 18px;
     font-weight: 300;
     margin-top: 20px;
+    margin-right: 5px;
 }
 
-.producto.prom p {
-    padding: 0 lmem;
-    font-size: 20px;
-    font-weight: 100;
-    text-align: justify;
-    margin-left: 20px;
-    margin-right: 20px;
+.producto p {
+    font-size: 16px;
+    margin-bottom: 20px; 
 }
 
-.producto.prom button {
+.producto button {
     width: 90px;
     height: 30px;
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
     margin-bottom: 20px;
-    align-self: flex-end;
-    background-color: #000000;
+    background-color: #000;
     color: #ccc;
-    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.producto.prom button:hover {
-    background-color: #333; /* Cambio de color al pasar el cursor */
+
+.producto button:hover {
+    background-color: #333;
+    color: #fff;
 }

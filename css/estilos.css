@@ -12,16 +12,19 @@ body {
 
 /* BARRA DE MENÚ */
 header {
-    width: 100%;
-    height: 200px;
+    width: 100%; /* Mantenemos el ancho al 100% */
+    height: 200px; /* Altura original */
     text-align: center;
     position: relative;
     top: 0;
-    overflow: hidden;
+    left: 0;
+    right: 0; /* Ajustamos el ancho */
+    overflow-x: visible; /* Permitimos el desbordamiento horizontal */
     z-index: 9999;
     background-color: #fff;
     transition: background-color 0.15s ease;
 }
+
 header:hover {
     background-color: #fff; 
 }
@@ -84,6 +87,54 @@ nav a {
 }
 
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 10000; /* Ajusta el valor según sea necesario */
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    opacity: 0.5; /* Opacidad predeterminada */
+    transition: opacity 0.3s ease; /* Transición suave */
+
+}
+
+.dropdown-content a:hover {
+    opacity: 1; /* Opacidad al pasar el mouse */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ffffff;
+}
+
+
+
+
+
 /*MARQUEE -barrita negra de envios gratis */
 .marquee-space {
     height: 20px;
@@ -115,21 +166,128 @@ nav a {
     }
 }
 
+
+
+
+
+/* Estilos para la sección de productos */
+
+.producto h3 {
+    font-size: 18px; 
+}
+
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 20px; 
+}
+
+.producto {
+    width: calc(33.33% - 30px);
+    margin: 15px;
+    box-sizing: border-box;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+
 /*FOOTER*/
 footer {
+
+    height: 445px;
     margin-top: 3%;
     background-color: black;
     color: white;
     padding: 30px;
 }
 
+.footer-columns {
+    display: flex;
+}
+
 .footer-column {
+    margin-right: 40px;
     flex: 1;
 }
 
 .footer-column h4 {
+    text-align: left;
     padding-bottom: 10px;
-    margin-bottom: 10px; /* Añadido para espacio entre título y párrafos */
+    margin-bottom: 10px; 
 }
 
+.social-icons {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.social-icons span {
+    border-radius: 45%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons span i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #00acee;
+}
+
+.youtube {
+    background-color: #c4302b;
+}
+
+.pinterest {
+    background-color: #c8232c;
+}
+
+.instagram {
+    background: linear-gradient(
+        #405de6,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d,
+        #f56040,
+        #fcaf45
+    );
+}
+
+/* Ajustes de estilo para el copyright dentro del footer */
+.footer-content {
+   margin: 20px;
+}
+
+.footer-content .copyright {
+
+    position: absolute;
+    text-align: center;
+    bottom: 20;
+    left: 0;
+    width:1280px;
+    border-top: 1px solid #d2b495;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.footer-content .copyright p {
+    font-weight: 400;
+    font-size: 1.2rem; 
+}
 

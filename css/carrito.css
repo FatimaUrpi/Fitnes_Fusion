@@ -1,0 +1,24 @@
+#carrito {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+#carrito h2 {
+    margin-bottom: 10px;
+}
+
+#carrito-lista {
+    list-style: none;
+    padding: 0;
+}
+
+#carrito-lista li {
+    margin-bottom: 10px;
+}
+
+#carrito-total {
+    margin-top: 20px;
+    font-weight: bold;
+}

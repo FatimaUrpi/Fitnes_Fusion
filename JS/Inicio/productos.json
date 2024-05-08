@@ -1,0 +1,495 @@
+[
+    {
+        "id": 1,
+        "name": "CASACA NEGRA",
+        "price": 190,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre1.png",
+        "categoria": "ropa_deportiva",
+        "tipo": "casaca"
+    },
+    {
+        "id": 2,
+        "name": "CASACA PLOMA",
+        "price": 80,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre2.png",
+        "categoria": "ropa_deportiva",
+        "tipo": "casaca"
+    },
+    {
+        "id": 3,
+        "name": "CASACA NEGRA CON DOS LINEAS",
+        "price": 90,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre3.png",
+        "categoria": "ropa_deportiva",
+        "tipo": "casaca"
+    },
+    {
+        "id": 4,
+        "name": "CASACA BICOLOR",
+        "price": 95,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre4.png",
+        "categoria": "ropa_deportiva",
+        "tipo": "casaca"
+    },
+    {
+        "id": 5,
+        "name": "CASACA BLANCA",
+        "price": 85,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre5.png",
+        "categoria": "ropa_deportiva",
+        "tipo": "casaca"
+    },
+    {
+        "id": 6,
+        "name": "CASACA TRICOLOR",
+        "price": 70,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre6.png",
+        "categoria": "ropa_deportiva",
+        "tipo": "casaca"
+    },
+    {
+        "id": 7,
+        "name": "CASACA ESTAMPADO TROPICAL",
+        "price": 80,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre7.png",
+        "categoria": "ropa_deportiva",
+        "tipo": "casaca"
+    },
+    {
+        "id": 8,
+        "name": "CASACA NEUTRO",
+        "price": 95,
+        "image": "./img/Hombres/casacas_Hombre/casacasHombre8.png",
+        "categoria": "ropa_deportiva",
+        "tipo": "casaca"
+    },
+    
+        {
+            "id": 9,
+            "name": "CONJUNTO-CLARO",
+            "price": 120,
+            "image": "./img/Hombres/conjunto_Hombre/conjuntosHombre5.png",
+            "categoria": "ropa_deportiva",
+            "tipo": "conjunto"
+        },
+        {
+            "id": 10,
+            "name": "CONJUNTO-BICOLOR",
+            "price": 110,
+            "image": "./img/Hombres/conjunto_Hombre/conjuntosHombre6.png",
+            "categoria": "ropa_deportiva",
+            "tipo": "conjunto"
+        },
+        {
+            "id": 11,
+            "name": "CONJUNTO GREEN-HIDEN",
+            "price": 90,
+            "image": "./img/Hombres/conjunto_Hombre/conjuntosHombre7.png",
+            "categoria": "ropa_deportiva",
+            "tipo": "conjunto"
+        },
+        {
+            "id": 12,
+            "name": "CONJUNTO-WHITE",
+            "price": 170,
+            "image": "./img/Hombres/conjunto_Hombre/conjuntosHombre8.png",
+            "categoria": "ropa_deportiva",
+            "tipo": "conjunto"
+        },
+        {
+                "id": 13,
+                "name": "POLERA ESTAMPADO DE NINTENDO",
+                "price": 80,
+                "image": "./img/Hombres/poleras_Hombre/polerasHombre1.png",
+                "categoria": "ropa_deportiva",
+                "tipo": "polera"
+            },
+            {
+                "id": 14,
+                "name": "POLERA ESTAMPADO DE LUNA",
+                "price": 70,
+                "image": "./img/Hombres/poleras_Hombre/polerasHombre2.png",
+                "categoria": "ropa_deportiva",
+                "tipo": "polera"
+            },
+            {
+                "id": 15,
+                "name": "POLERA FASES DE LA LUNA",
+                "price": 80,
+                "image": "./img/Hombres/poleras_Hombre/polerasHombre3.png",
+                "categoria": "ropa_deportiva",
+                "tipo": "polera"
+            },
+            {
+                "id": 16,
+                "name": "POLERA PINK",
+                "price": 75,
+                "image": "./img/Hombres/poleras_Hombre/polerasHombre4.png",
+                "categoria": "ropa_deportiva",
+                "tipo": "polera"
+            },
+            {
+                "id": 17,
+                "name": "POLERA BICOLOR",
+                "price": 85,
+                "image": "./img/Hombres/poleras_Hombre/polerasHombre5.png",
+                "categoria": "ropa_deportiva",
+                "tipo": "polera"
+            },
+            {
+                "id": 18,
+                "name": "POLERA ORANGE",
+                "price": 80,
+                "image": "./img/Hombres/poleras_Hombre/polerasHombre6.png",
+                "categoria": "ropa_deportiva",
+                "tipo": "polera"
+            },
+            {
+                "id": 19,
+                "name": "POLERA BLUE-BLUE",
+                "price": 90,
+                "image": "./img/Hombres/poleras_Hombre/polerasHombre7.png",
+                "categoria": "ropa_deportiva",
+                "tipo": "polera"
+            },
+            {
+                "id": 20,
+                "name": "POLERA GREEN",
+                "price": 75,
+                "image": "./img/Hombres/poleras_Hombre/polerasHombre8.png",
+                "categoria": "ropa_deportiva",
+                "tipo": "polera"
+            },
+        
+            {
+                "id": 21,
+                "name": "CREATINA DORIAN YAMES",
+                "price": 90,
+                "image": "img/Suplementos-Inicio/Suplementos-Creatina/Suplemento-Creatina1.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Creatina"
+            },
+            {
+                "id": 22,
+                "name": "CREATINA MONOHIDRATADA 300GRM - ULTIMATE NUTRITION",
+                "price": 130,
+                "image": "img/Suplementos-Inicio/Suplementos-Creatina/Suplemento-Creatina2.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Creatina"
+            },
+            {
+                "id": 23,
+                "name": "CREATINA KEVIN LEVRONE",
+                "price": 119,
+                "image": "img/Suplementos-Inicio/Suplementos-Creatina/Suplemento-Creatina3.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Creatina"
+            },
+            {
+                "id": 24,
+                "name": "CREATINA MY PROTEIN",
+                "price": 90,
+                "image": "img/Suplementos-Inicio/Suplementos-Creatina/Suplemento-Creatina4.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Creatina"
+            },
+            {
+                "id": 25,
+                "name": "CREATINA MICRONIZADA POWDER 600GR",
+                "price": 269,
+                "image": "img/Suplementos-Inicio/Suplementos-Creatina/Suplemento-Creatina5.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Creatina"
+            },
+            {
+                "id": 26,
+                "name": "CREATINA MICRONIZADA POWDER 300GR",
+                "price": 139,
+                "image": "img/Suplementos-Inicio/Suplementos-Creatina/Suplemento-Creatina6.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Creatina"
+            },
+            {
+                "id": 27,
+                "name": "RAW EAA",
+                "price": 149,
+                "image": "img/Suplementos-Inicio/Suplementos-Creatina/Suplemento-Creatina7.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Creatina"
+            },
+            {
+                "id": 28,
+                "name": "C4 Extreme PRE WORKOUT",
+                "price": 159,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno1.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 29,
+                "name": "SHAABOOM PUMP",
+                "price": 109,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno2.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+    
+            {
+                "id": 30,
+                "name": "CLA MY PROTEIN",
+                "price": 60,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno3.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 31,
+                "name": "C4 ULTIMATE",
+                "price": 169,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno4.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 32,
+                "name": "ALPHAMINE",
+                "price": 159,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno5.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 33,
+                "name": "RAW PUMP NOM-STIM",
+                "price": 199,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno6.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 34,
+                "name": "TOTAL WAR",
+                "price": 159,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno7.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 35,
+                "name": "PSYCHOTIC - INSANE LABZ",
+                "price": 209,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno8.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 36,
+                "name": "PSYCHOTIC - INSANE LABZ",
+                "price": 159,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno9.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 37,
+                "name": "PSYCHOTIC - INSANE LABZ",
+                "price": 189,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno10.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 38,
+                "name": "PSYCHOTIC - INSANE LABZ",
+                "price": 229,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno11.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 39,
+                "name": "M6TEEN - 12X60ML - PRE ENTRENO LIQUIDO DY",
+                "price": 120,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno12.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 40,
+                "name": "BLOODS & GUTS",
+                "price": 130,
+                "image": "img/Suplementos-Inicio/Suplementos-PreEntreno/Suplemento-PreEntreno13.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Pre-Entreno"
+            },
+            {
+                "id": 41,
+                "name": "PROTEINA ISO XP",
+                "price": 199,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina1.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 42,
+                "name": "IMPACT WEY ISOLATE",
+                "price": 200,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina2.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 43,
+                "name": "PROTEÍNA NITROTECH",
+                "price": 169,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina3.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 44,
+                "name": "IMPACT WEY ISOLATE",
+                "price": 170,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina4.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 45,
+                "name": "PROTEINA MUTANT WHEY 2LB",
+                "price": 160,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina5.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 46,
+                "name": "PROTEINA MUTANT WHEY",
+                "price": 160,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina6.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 47,
+                "name": "PROTEINA SHADOWHEY 2KG",
+                "price": 199,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina7.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 48,
+                "name": "DORIAN YATES SHOWDOWEY ISOLATE - PROTEINA 2KG",
+                "price": 199,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina8.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 49,
+                "name": "PROTEINA LEVROISO WHEY",
+                "price": 199,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina9.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 50,
+                "name": "DIESEL ISOLATE",
+                "price": 199,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina10.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 51,
+                "name": "PROTEINA HYDROLIZED LAB NUTRITION",
+                "price": 199,
+                "image": "img/Suplementos-Inicio/Suplementos-Proteina/Suplemento-Proteina11.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Proteina"
+            },
+            {
+                "id": 52,
+                "name": "CALCIUM & MAGNESIUM - MY PROTEIN / 90 TABLETAS",
+                "price": 60,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas1.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            },
+            {
+                "id": 53,
+                "name": "MAX MARINE OMEGA3",
+                "price": 90,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas2.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            },
+            {
+                "id": 54,
+                "name": "FISH OIL OMEGA-3",
+                "price": 129,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas3.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            },
+            {
+                "id": 55,
+                "name": "OXYGOLD",
+                "price": 119,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas4.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            },
+            {
+                "id": 56,
+                "name": "PLATINUM MULTIVITAMIN",
+                "price": 48,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas5.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            },
+            {
+                "id": 57,
+                "name": "MYPROTEIN ZINC 90 TABLETAS",
+                "price": 99,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas6.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            },
+            {
+                "id": 58,
+                "name": "CALCIUM & MAGNESIUM - MY PROTEIN / 90 TABLETAS + MY PROTEIN ZINC 90 TABLETAS",
+                "price": 150,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas7.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            },
+            {
+                "id": 59,
+                "name": "CALCIUM & MAGNESIUM - MY PROTEIN + MY PROTEIN ZINC 90 TABLETAS + MAX MARINE OMEGA3",
+                "price": 60,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas8.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            },
+            {
+                "id": 60,
+                "name": "OPTI - MEN",
+                "price": 169,
+                "image": "img/Suplementos-Inicio/Suplementos-Vitaminas/Suplemento-vitaminas9.jpg",
+                "categoria": "Suplementos",
+                "tipo": "Vitamina"
+            }
+]
+
+
+
+
+
+        
+
+     
+        
+        
