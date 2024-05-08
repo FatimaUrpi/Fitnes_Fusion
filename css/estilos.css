@@ -15,7 +15,7 @@ header {
     width: 100%; /* Mantenemos el ancho al 100% */
     height: 200px; /* Altura original */
     text-align: center;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0; /* Ajustamos el ancho */
