@@ -1,0 +1,95 @@
+main {
+    background-color: #ada8a8; /* Cambia el color de fondo según sea necesario */
+    padding: 20px;
+}
+
+.facebook,
+.google {
+    text-align: center; /* Centra el contenido de los botones */
+}
+
+.facebook a,
+.google a {
+    display: inline-block; /* Convierte los enlaces en elementos de bloque para poder centrarlos */
+    margin-bottom: 10px; /* Añade un margen inferior para separar los botones */
+}
+
+.facebook svg,
+.google svg {
+ margin-right: 30px;
+}
+
+.facebook.redes-btn a{
+    /* Estilos que deseas aplicar */
+    background-color: #77B7FC; /* Color de fondo */
+    color: #77B7FC; /* Color del texto */
+    border-color: 77B7FC;
+    text-decoration: none; 
+}
+
+
+
+.redes-btn a {
+    display: inline-block; /* Convierte los enlaces en elementos de bloque */
+    text-align: center; /* Centra el texto dentro de los botones */
+    padding: 10px 20px; /* Ajusta el relleno del botón */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    border: 1px solid transparent; /* Agrega un borde transparente */
+    transition: background-color 0.3s, border-color 0.3s; /* Agrega una transición suave */
+    width: 350px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.redes-btn a:hover {
+    background-color: #9e9797; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+    border-color: #ccc; /* Cambia el color del borde al pasar el cursor sobre el botón */
+}
+
+
+.Container {
+    max-width: 500px; /* Establece el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.Page-Logueo {
+    background-color: #ffffff; /* Establece el color de fondo del área de contenido */
+    padding: 20px; /* Agrega espacio interno al área de contenido */
+    border-radius: 8px; /* Agrega bordes redondeados al área de contenido */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave al área de contenido */
+}
+
+.Form__Header {
+    margin-bottom: 20px; /* Ajusta el espacio entre el título y el contenido del formulario */
+    height: 100px;
+}
+
+.Form__Title {
+    margin-bottom: 10px; /* Ajusta el espacio entre el título y la leyenda del formulario */
+}
+
+.Form__Legend {
+    margin-bottom: 20px; /* Ajusta el espacio entre la leyenda y los campos del formulario */
+}
+
+.Form__Item {
+    margin-bottom: 20px; /* Ajusta el espacio entre los campos del formulario */
+}
+
+.Form__Input {
+    width: 100%; /* Establece el ancho completo para los campos de entrada */
+}
+
+.Form__FloatingLabel {
+    position: absolute; /* Coloca las etiquetas de entrada en una posición absoluta */
+    top: 10px; /* Ajusta la posición vertical de las etiquetas de entrada */
+    left: 10px; /* Ajusta la posición horizontal de las etiquetas de entrada */
+    transition: all 0.3s ease; /* Agrega una transición suave al cambiar el estado de las etiquetas de entrada */
+    pointer-events: none; /* Evita que las etiquetas de entrada interfieran con la entrada del usuario */
+}
+
+.Form__Input:focus + .Form__FloatingLabel,
+.Form__Input:not(:placeholder-shown) + .Form__FloatingLabel {
+    top: -10px; /* Mueve las etiquetas de entrada hacia arriba cuando el campo de entrada está enfocado o tiene contenido */
+    font-size: 12px; /* Reduce el tamaño de la fuente de las etiquetas de entrada */
+    color: #666; /* Cambia el color de las etiquetas de entrada cuando el campo de entrada está enfocado o tiene contenido */
+}

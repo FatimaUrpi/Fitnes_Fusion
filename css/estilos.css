@@ -16,7 +16,6 @@ header {
     height: 200px;
     text-align: center;
     position: relative;
-    position: fixed;
     top: 0;
     overflow: hidden;
     z-index: 9999;
