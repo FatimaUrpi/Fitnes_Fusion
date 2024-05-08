@@ -4,11 +4,12 @@ let listRopaDeportiva = [];
 const addDataHTMLRopaDeportiva = () => {
     listRopaDeportivaHTML.innerHTML = '';
     const tipos = ['polera', 'casaca', 'conjunto'];
+    let totalProductosMostrados = 0;
     tipos.forEach(tipo => {
         const productosTipo = listRopaDeportiva.filter(producto => producto.tipo === tipo);
         if (productosTipo.length > 0) {
-            // Limitar la cantidad de productos a mostrar a 1 o 2
-            productosTipo.slice(0, 1).forEach(producto => {
+            const productosMostradosPorTipo = Math.min(2, 4 - totalProductosMostrados);
+            productosTipo.slice(0, productosMostradosPorTipo).forEach(producto => {
                 let newProduct = document.createElement('div');
                 newProduct.classList.add('item');
                 newProduct.innerHTML = `
@@ -17,6 +18,7 @@ const addDataHTMLRopaDeportiva = () => {
                 <div class="price">S/.${producto.price}</div>
                 <button class="addCard">Comprar</button>`;
                 listRopaDeportivaHTML.appendChild(newProduct);
+                totalProductosMostrados++;
             });
         }
     });
@@ -31,8 +33,6 @@ const initAppRopaDeportiva = () => {
         })
 }
 initAppRopaDeportiva();
-
-/*SUPLEMENTOS*/
 
 let listSuplementosHTML = document.querySelector('.listSuplementos');
 let listSuplementos = [];
@@ -63,12 +63,11 @@ const initAppSuplementos = () => {
 }
 initAppSuplementos();
 
-/*ACCESORIOS*/
 
 let listAccesoriosHTML = document.querySelector('.listAccesorios');
 let listAccesorios = [];
 
-const addDataHTMLConjuntos = () => {
+const addDataHTMLAccesorios = () => {
     listAccesoriosHTML.innerHTML = '';
     if (listAccesorios.length > 0) {
         listAccesorios.forEach(product => {
@@ -84,14 +83,15 @@ const addDataHTMLConjuntos = () => {
     }
 }
 
-const initAppConjuntos = () => {
+const initAppAccesorios = () => {
     fetch('./JS/inicio/productos.json')
         .then(response => response.json())
         .then(data => {
             listAccesorios = data.filter(product => product.categoria === "Accesorios");
-            addDataHTMLConjuntos();
+            addDataHTMLAccesorios();
         })
 }
+
 initAppConjuntos();
 
 /*INDEX ACCESORIOS*/
@@ -124,3 +124,4 @@ const initAppConjuntosI = () => {
         })
 }
 initAppConjuntosI();
+

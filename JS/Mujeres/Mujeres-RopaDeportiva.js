@@ -4,6 +4,9 @@ let listProductPolerasMujeres = [];
 
 const addDataHTMLPoleraMujer = () => {
     listProductPolerasMujeresHTML.innerHTML = '';
+    const tipos = ['polera'];
+    tipos.forEach(tipo => {
+        const productosTipo = listProductPolerasMujeres.filter(producto => producto.tipo === tipo);
     if (listProductPolerasMujeres.length > 0) {
         listProductPolerasMujeres.forEach(product => {
             let newProduct = document.createElement('div');
@@ -14,15 +17,15 @@ const addDataHTMLPoleraMujer = () => {
             <div class="price">S/.${product.price}</div>
             <button class="addCard">Comprar</button>`;
             listProductPolerasMujeresHTML.appendChild(newProduct);
-        })
+        });
     }
+});
 }
-
 const initAppPoleraMujer = () => {
-    fetch('./JS/Mujeres/mujerPolera.json')
+    fetch('./JS/inicio/productos.json')
         .then(response => response.json())
         .then(data => {
-            listProductPolerasMujeres = data;
+            listProductPolerasMujeres = data.filter(producto => producto.categoria === "ropa_deportiva" && producto.tipo === "polera" && producto.genero === "Mujer");
             addDataHTMLPoleraMujer();
         })
 }
@@ -35,6 +38,9 @@ let listProductsCasacasMujeres = [];
 
 const addDataHTMLCasacasMujeres = () => {
     listProductCasacasMujeresHTML.innerHTML = '';
+    const tipos = ['casaca'];
+    tipos.forEach(tipo => {
+    const productosTipo = listProductsCasacasMujeres.filter(producto => producto.tipo === tipo);
     if (listProductsCasacasMujeres.length > 0) {
         listProductsCasacasMujeres.forEach(product => {
             let newProduct = document.createElement('div');
@@ -45,15 +51,15 @@ const addDataHTMLCasacasMujeres = () => {
             <div class="price">S/.${product.price}</div>
             <button class="addCard">Comprar</button>`;
             listProductCasacasMujeresHTML.appendChild(newProduct);
-        })
+        });
     }
+});
 }
-
 const initAppCasacasMujeres = () => {
-    fetch('./JS/Mujeres/mujerCasaca.json')
+    fetch('./JS/inicio/productos.json')
         .then(response => response.json())
         .then(data => {
-            listProductsCasacasMujeres = data;
+            listProductsCasacasMujeres = data.filter(producto => producto.categoria === "ropa_deportiva" && producto.tipo === "casaca"&& producto.genero === "Mujer");
             addDataHTMLCasacasMujeres();
         })
 }
@@ -66,6 +72,9 @@ let listProductsConjuntosMujeres = [];
 
 const addDataHTMLConjuntosMujeres = () => {
     listProductConjuntosMujeresHTML.innerHTML = '';
+    const tipos = ['conjunto'];
+    tipos.forEach(tipo => {
+        const productosTipo = listProductPolerasMujeres.filter(producto => producto.tipo === tipo);
     if (listProductsConjuntosMujeres.length > 0) {
         listProductsConjuntosMujeres.forEach(product => {
             let newProduct = document.createElement('div');
@@ -76,15 +85,15 @@ const addDataHTMLConjuntosMujeres = () => {
             <div class="price">S/.${product.price}</div>
             <button class="addCard">Comprar</button>`;
             listProductConjuntosMujeresHTML.appendChild(newProduct);
-        })
+        });
     }
+});
 }
-
 const initAppConjuntosMujeres = () => {
-    fetch('./JS/Mujeres/mujerConjunto.json')
+    fetch('./JS/inicio/productos.json')
         .then(response => response.json())
         .then(data => {
-            listProductsConjuntosMujeres = data;
+            listProductsConjuntosMujeres = data.filter(producto => producto.categoria === "ropa_deportiva" && producto.tipo === "conjunto"&& producto.genero === "Mujer");
             addDataHTMLConjuntosMujeres();
         })
 }
