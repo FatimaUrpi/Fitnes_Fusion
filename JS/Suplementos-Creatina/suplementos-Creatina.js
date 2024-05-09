@@ -16,7 +16,7 @@ const addDataHTMLCreatine = () =>{
             <img src="${creatinas.image}" alt="">
             <h2>${creatinas.name}</h2>
             <div class="price">S/.${creatinas.price}</div>
-            <button class="addCard">Comprar</button>`;
+            <button class="addCardaddCart(${creatinas.id})">Comprar</button>`;
             listCreatineHTML.appendChild(newCreatine);
         });
     }
