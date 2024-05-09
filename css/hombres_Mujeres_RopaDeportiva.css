@@ -611,3 +611,12 @@ footer {
 .product {
     margin: 50px 30px;
 }
+
+.d-flex{
+    margin-top: 20px;
+    height: 50ch;
+}
+
+.copy-p{
+    margin-top: 20px;
+}
