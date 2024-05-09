@@ -22,7 +22,7 @@ let products = null;
 fetch('./JS/Inicio/productos.json')
     .then(response => response.json())
     .then(data => {
-        products = data.filter(producto => producto.categoria === "Suplementos" && producto.tipo === "Creatina");
+        products = data;
         addDataToHTML();
     })
 
@@ -33,17 +33,18 @@ function addDataToHTML() {
     //add data
     if (products != null) {
         products.forEach(product => {
-            let newProduct = document.createElement('div');
-            newProduct.classList.add('item');
-            newProduct.innerHTML = `
-            <img src="${product.image}" alt="">
-            <h2>${product.name}</h2>
-            <div class="price">S/.${product.price}</div>
-            <button onclick="addCart(${product.id})">Comprar</button>`;
-            listproductHtML.appendChild(newProduct);
+            if (product.tipo === "Creatina") {
+                let newProduct = document.createElement('div');
+                newProduct.classList.add('item');
+                newProduct.innerHTML = `
+                <img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">S/.${product.price}</div>
+                <button onclick="addCart(${product.id})">Comprar</button>`;
+                listproductHtML.appendChild(newProduct);
+            }
         });
     }
-
 }
 /*Lista add */
 let listCart = [];
