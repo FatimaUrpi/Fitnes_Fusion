@@ -147,6 +147,8 @@ footer {
 .social-icons {
     display: flex;
     gap: 1.8rem;
+    cursor: pointer;
+
 }
 
 .social-icons span {
