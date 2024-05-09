@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página de venta de videojuegos y accesorios para consolas</title>
+
+    <!-- CSS -->
+    <link href="css/inicio.css" rel="stylesheet">
+    <link href="css/carrito.css" rel="stylesheet">
+    <link href="css/hombres_Mujeres_RopaDeportiva.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- JS -->
+    <script src="JS/Inicio/bootstrap.bundle.min.js"></script>
+    <script src="JS/sliders.js"></script>
+    <script src="JS/Carrito/carrito.js"></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="Index.html" class="Logo"><img src="img/logo1.jpg" alt=""></a>
+            <a href="./hombres-RopaDeportiva.html">HOMBRES</a>
+           <a href="./Mujeres-RopaDeportiva.html">MUJERES</a>
+            <div class="dropdown">
+                <a href="suplementos-Inicio.html">SUPLEMENTOS</a>
+                <div class="dropdown-content">
+                    <a href="suplementos-Creatina.html">Creatina</a>
+                    <a href="suplementos-PreEntreno.html">PreEntreno</a>
+                    <a href="suplementos-Proteina.html">Proteína</a>
+                    <a href="suplementos-Vitaminas.html">Vitaminas</a>
+                </div>
+            </div>
+        
+            <a href="accesorios.html">ACCESORIOS</a> 
+            <a href="iniciarSesion.html" class="user"><img src="img/user.png" alt=""></a>
+            <a href="carrito.html" class="carrito"><img src="img/carrito.png" alt=""></a>
+        </nav>
+        
+        <div class="marquee-space"></div>
+        <div class="marquee">
+            <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
+            <span class="marquee-text">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
+            <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
+            <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
+            <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
+            <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
+            <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
+            <span class="marquee-text" aria-hidden="true">📦 <span class="marquee--stencil-this">Envíos</span> GRATIS</span>
+        </div>
+    </header>
+      
+    <!-- SLIDER -->
+    <div class="anuncio">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/banner1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/banner2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/banner3.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="product container">
+        <CENTER>
+            <h1>Ropa Deportiva</h1>
+        </CENTER>
+        <br>
+        <div class="listRopaDeportiva">
+            <!-- Aquí se mostrarán los productos de ropa deportiva -->
+        </div>
+        <br>
+        <br>
+        <button class="buttonSection" id="ver-mas-ropa-btn"> VER MÁS</button>
+        <div class="buttonOpcion" id="opciones-ropa" style="display: none;">
+            <button id="opcion-hombre">Hombre</button>
+            <button id="opcion-mujer">Mujer</button>
+        </div>
+    </section>
+
+    <section class="product container">
+        <CENTER>
+            <h1>Suplementos</h1>
+        </CENTER>
+        <br>
+        <div class="listSuplementos">
+            <div class="item">
+            </div>
+        </div>
+        <br>
+        <br>
+        <button class="buttonSection" id="ver-mas-suplementos-btn"> VER MÁS</button>
+        <div class="buttonOpcion" id="opciones-suplementos" style="display: none;">
+            <button id="opcion-creatina">Creatina</button>
+            <button id="opcion-pre-entreno">Pre-Entreno</button>
+            <button id="opcion-proteina">Proteína</button>
+            <button id="opcion-vitaminas">Vitaminas</button>
+        </div>
+    </section>
+
+
+    <section class="product container">
+        <CENTER>
+            <h1>Accesorios</h1>
+        </CENTER>
+        <br>
+        <div class="listAccesoriosInicio">
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="d-flex">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="info-atencion footer-column">
+                    <h4>Información de Contacto</h4>
+                    <ul>
+                        <li>
+                            Dirección: 71 Pennington Lane Vernon Rockville, CT 06066
+                        </li>
+                        <li>Teléfono: 123-456-7890</li>
+                        <li>Fax: 55555300</li>
+                        <li>Email: bakebliss@support.com</li>
+                    </ul>
+                    <br>
+                    <br>
+                    <div class="social-icons">
+                        <span class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </span>
+                        <span class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                        <span class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </span>
+                        <span class="pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </span>
+                        <span class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="info-atencion footer-column">
+                    <h4>Atención al cliente</h4>
+                    <ul>
+                        <li>Formas de pago</li>
+                        <li>Métodos de Envío</li>
+                        <li>Cambios & Devoluciones</li>
+                        <li>Guía de Tallas</li>
+                    </ul>
+                </div>
+                <div class="nosotros footer-column">
+                    <h4>Nosotros</h4>
+                    <ul>
+                        <li>Quienes somos</li>
+                        <li>Reviews de clientes</li>
+                        <li>Nuestras Tiendas</li>
+                        <li>Trabaja con nosotros</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>
+                    Desarrollado por estudiantes de Cibertec - Ciclo 5 &copy; 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="./JS/Inicio/jquery-1.11.0.min.js"></script>
+    <script src="./JS/Inicio/index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
