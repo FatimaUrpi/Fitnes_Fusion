@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Página de venta de videojuegos y accesorios para consolas</title>
+    <title>INICIO</title>
 
 
     <!-- CSS -->
     <link href="css/inicio.css" rel="stylesheet">
     <link href="css/carrito.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/carrito.css">
     <link href="css/hombres_Mujeres_RopaDeportiva.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <!-- JS -->
@@ -46,7 +46,11 @@
         
             <a href="accesorios.html">ACCESORIOS</a> 
             <a href="iniciarSesion.html" class="user"><img src="img/user.png" alt=""></a>
-            <a href="carrito.html" class="carrito"><img src="img/carrito.png" alt=""></a>
+
+            <div class="iconCart">
+                <img src="img/carrito.png">
+                <div class="totalQuantity">0</div>
+            </div>
   </nav>
 
         
@@ -205,6 +209,9 @@
             </div>
         </div>
     </div>
+
+    <script src="./JS/Carrito/carrito.js"></script>
+
     <script src="./JS/Inicio/jquery-1.11.0.min.js"></script>
     <script src="./JS/Inicio/index.js"></script>
 </body>
