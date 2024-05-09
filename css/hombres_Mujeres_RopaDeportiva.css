@@ -24,7 +24,6 @@ header {
     z-index: 9999;
     background-color: #fff;
     transition: background-color 0.15s ease;
-
 }
 
 header:hover {

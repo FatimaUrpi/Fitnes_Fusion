@@ -1,29 +1,31 @@
+let products = null;
 
-let listAccesoriosHTML = document.querySelector('.listAccesorios');
-let listAccesorios = [];
+// Obtener datos de productos
+fetch('./JS/Inicio/productos.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        addDataToHTML();
+    })
 
-const addDataHTMLAccesorios = () => {
-    listAccesoriosHTML.innerHTML = '';
-    if (listAccesorios.length > 0) {
-        listAccesorios.slice(0).forEach(product => {
-            let newProduct = document.createElement('div');
-            newProduct.classList.add('item');
-            newProduct.innerHTML = `
-            <img src="${product.image}" alt="">
-            <h2>${product.name}</h2>
-            <div class="price">S/.${product.price}</div>
-            <button class="addCard">Comprar</button>`;
-            listAccesoriosHTML.appendChild(newProduct);
+// Mostrar productos en HTML
+function addDataToHTML() {
+    let listproductHtML = document.querySelector('.listAccesorios');
+    listproductHtML.innerHTML = "";
+
+    // Agregar datos
+    if (products != null) {
+        products.forEach(product => {
+            if (product.categoria === "Accesorios") {
+                let newProduct = document.createElement('div');
+                newProduct.classList.add('item');
+                newProduct.innerHTML = `
+                <img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">S/.${product.price}</div>
+                <button onclick="addCart(${product.id})">Comprar</button>`;
+                listproductHtML.appendChild(newProduct);
+            }
         });
     }
 }
-
-const initAppAccesorios = () => {
-    fetch('./JS/inicio/productos.json')
-        .then(response => response.json())
-        .then(data => {
-            listAccesorios = data.filter(product => product.categoria === "Accesorios");
-            addDataHTMLAccesorios();
-        })
-}
-initAppAccesorios();

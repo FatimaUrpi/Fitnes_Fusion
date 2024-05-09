@@ -1,33 +1,31 @@
+let products = null;
 
-let listCreatineHTML = document.querySelector('.listCreatine');
+// Obtener datos de productos
+fetch('./JS/Inicio/productos.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        addDataToHTML();
+    })
 
-let listCreatine = [];
+// Mostrar productos en HTML
+function addDataToHTML() {
+    let listproductHtML = document.querySelector('.listCreatine');
+    listproductHtML.innerHTML = "";
 
-const addDataHTMLCreatine = () =>{
-    listCreatineHTML.innerHTML = '';
-    const tipos = ['Creatina'];
-    tipos.forEach(tipo => {
-    const productosTipo = listCreatine.filter(producto => producto.tipo === tipo);
-    if(listCreatine.length > 0){
-        listCreatine.forEach(creatinas =>{
-            let newCreatine = document.createElement('div');
-            newCreatine.classList.add('item');
-            newCreatine.innerHTML =`
-            <img src="${creatinas.image}" alt="">
-            <h2>${creatinas.name}</h2>
-            <div class="price">S/.${creatinas.price}</div>
-            <button class="addCardaddCart(${creatinas.id})">Comprar</button>`;
-            listCreatineHTML.appendChild(newCreatine);
+    // Agregar datos
+    if (products != null) {
+        products.forEach(product => {
+            if (product.tipo === "Creatina") {
+                let newProduct = document.createElement('div');
+                newProduct.classList.add('item');
+                newProduct.innerHTML = `
+                <img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">S/.${product.price}</div>
+                <button onclick="addCart(${product.id})">Comprar</button>`;
+                listproductHtML.appendChild(newProduct);
+            }
         });
     }
-});
 }
-const initAppCreatine = () => {
-    fetch('./JS/inicio/productos.json')
-        .then(response => response.json())
-        .then(data => {
-            listCreatine = data.filter(producto => producto.categoria === "Suplementos" && producto.tipo === "Creatina");
-            addDataHTMLCreatine();
-        })
-}
-initAppCreatine();   
