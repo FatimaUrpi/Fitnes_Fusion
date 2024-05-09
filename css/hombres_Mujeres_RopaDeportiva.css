@@ -6,6 +6,11 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+body {
+    width: 100%;
+    font-family: sans-serif;
+    background-color: #fff;
+}
 
 /* BARRA DE MENÚ */
 header {

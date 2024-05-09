@@ -161,8 +161,6 @@ footer {
 .social-icons {
     display: flex;
     gap: 1.8rem;
-    cursor: pointer;
-
 }
 
 .social-icons span {
@@ -286,3 +284,4 @@ footer {
     line-height: 1.5;
     color: #333;
 }
+
