@@ -63,13 +63,13 @@ const initAppSuplementos = () => {
 }
 initAppSuplementos();
 
-let listAccesoriosHTML = document.querySelector('.listAccesorios');
+let listAccesoriosHTML = document.querySelector('.listAccesoriosInicio');
 let listAccesorios = [];
 
 const addDataHTMLAccesorios = () => {
     listAccesoriosHTML.innerHTML = '';
     if (listAccesorios.length > 0) {
-        listAccesorios.slice(0, 4).forEach(product => {
+        listAccesorios.slice(0,4).forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.classList.add('item');
             newProduct.innerHTML = `
@@ -91,8 +91,6 @@ const initAppAccesorios = () => {
         })
 }
 initAppAccesorios();
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
     function mostrarOpcionesRopaOcultarVerMas() {

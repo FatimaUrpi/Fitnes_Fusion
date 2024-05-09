@@ -9,24 +9,25 @@ body {
     font-family: sans-serif;
     background-color: #fff;
 }
-
 /* BARRA DE MENÚ */
 header {
-    width: 100%; /* Mantenemos el ancho al 100% */
-    height: 180px; /* Altura original */
+    width: 100%;
+    height: 200px;
     text-align: center;
     position: relative;
+    position: fixed;
     top: 0;
-    left: 0;
-    right: 0; /* Ajustamos el ancho */
+    overflow: hidden;
     z-index: 9999;
     background-color: #fff;
     transition: background-color 0.15s ease;
+
 }
 
 header:hover {
-    background-color: #fff; 
+    background-color: #fff;
 }
+
 header:hover::after {
     content: '';
     position: absolute;
@@ -37,10 +38,28 @@ header:hover::after {
     z-index: -1;
     transition: opacity 0.10s ease;
 }
-header:hover nav a {
-    color: black;
+
+header nav a {
+    color: rgb(0, 0, 0);
 }
-header nav{
+
+
+header:hover nav a {
+    text-decoration: none;
+
+}
+
+nav a:hover {
+    color: #063970;
+    /* Color al pasar el mouse */
+    font-weight: bold;
+    /* Hacer el texto más grueso */
+
+}
+
+
+
+header nav {
     position: absolute;
     bottom: 0;
     height: 60px;
@@ -48,14 +67,128 @@ header nav{
     width: 100%;
     margin-bottom: 80px;
 }
+
+header nav {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
 nav a {
     color: black;
     display: inline-block;
     padding: 20px 30px;
     line-height: 1;
-    text-decoration: none; 
-    text-align: center;   
+    text-decoration: none;
+    text-align: center;
 }
+
+
+
+/*Logo*/
+.Logo {
+    margin-right: 120px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.Logo img {
+    width: 180px;
+    height: auto;
+    margin-top: -80px;
+
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 10000;
+    /* Ajusta el valor según sea necesario */
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: max-content; /* Cambiamos esto */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block; /* Cambiamos esto */
+    opacity: 0.5; /* Opacidad predeterminada */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+.dropdown-content a:hover {
+    opacity: 1;
+    /* Opacidad al pasar el mouse */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ffffff;
+}
+
+
+/*MARQUEE -barrita negra de envios gratis */
+.marquee-space {
+    height: 20px;
+}
+
+.marquee {
+    margin-top: 156px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: black;
+    width: 100%;
+}
+
+.marquee-text {
+    display: inline-block;
+    margin-left: 2px;
+    animation: marquee-scroll var(--duration, 7s) linear infinite;
+    color: #fff;
+
+}
+
+
+
+
+.marquee-text:after {
+    content: "📦 Envíos GRATIS  ";
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(2%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
 .carrito {
     width: 20px;
     height: 20px;
@@ -83,104 +216,6 @@ nav a {
     height: 160px;
     margin-top: -80px; 
    
-}
-
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 10000; /* Ajusta el valor según sea necesario */
-}
-
-.dropbtn {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    opacity: 0.5; /* Opacidad predeterminada */
-    transition: opacity 0.3s ease; /* Transición suave */
-
-}
-
-.dropdown-content a:hover {
-    opacity: 1; /* Opacidad al pasar el mouse */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #ffffff;
-}
-
-
- .icono-carrito {
-    position: relative;
-    top: 10px;
-}
-
- .icono-carrito span {
-    position: absolute;
-    background-color: red;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #fff;
-    top: 30px;
-    left: 50%; /* Ajustamos la posición a la mitad del icono */
-    transform: translate(50%, -50%); /* Centramos vertical y horizontalmente */
-}
-
-
-/*MARQUEE -barrita negra de envios gratis */
-.marquee-space {
-    height: 20px;
-}
-.marquee {
-    margin-top: 156px;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    background-color: black;
-    width: 100%;
-}
-.marquee-text {
-    display: inline-block;
-    margin-left: 2px;
-    animation: marquee-scroll var(--duration, 7s) linear infinite;
-    color: #fff;
-}
-.marquee-text:after {
-    content: " 📦 Envíos GRATIS  ";
-}
-
-@keyframes marquee-scroll {
-    from {
-        transform: translateX(2%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
 }
 
 
@@ -359,97 +394,6 @@ footer {
 }
 
 
-/* cart */
-.cartTab{
-    width: 400px;
-    background-color: #353432;
-    color: #eee;
-    position: fixed;
-    top: 0;
-    right: -400px;
-    bottom: 0;
-    display: grid;
-    grid-template-rows: 70px 1fr 70px;
-    transition: .5s;
-}
-body.showCart .cartTab{
-    right: 0;
-}
-body.showCart .container{
-    transform: translateX(-250px);
-}
-.cartTab h1{
-    padding: 20px;
-    margin: 0;
-    font-weight: 300;
-}
-.cartTab .btn{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.cartTab button{
-    background-color: #E8BC0E;
-    border: none;
-    font-family: Poppins;
-    font-weight: 500;
+.addCard{
     cursor: pointer;
-}
-.cartTab .close{
-    background-color: #eee;
-}
-.listCart .item img{
-    width: 100%;
-}
-.listCart .item{
-    display: grid;
-    grid-template-columns: 70px 150px 50px 1fr;
-    gap: 10px;
-    text-align: center;
-    align-items: center;
-}
-.listCart .quantity span{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-    color: #555;
-    cursor: pointer;
-}
-.listCart .quantity span:nth-child(2){
-    background-color: transparent;
-    color: #eee;
-    cursor: auto;
-}
-.listCart .item:nth-child(even){
-    background-color: #eee1;
-}
-.listCart{
-    overflow: auto;
-}
-.listCart::-webkit-scrollbar{
-    width: 0;
-}
-@media only screen and (max-width: 992px) {
-    .listProduct{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-/* mobile */
-@media only screen and (max-width: 768px) {
-    .listProduct{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-svg{
-    width: 30px;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
 }

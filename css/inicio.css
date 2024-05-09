@@ -34,6 +34,7 @@
     border-radius: 20px;
     margin-top: 10px;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -72,19 +73,20 @@
     border-radius: 20px;
     margin-top: 10px;
     border: none;
+    cursor: pointer;
 }
 
 /*CONJUNTOS*/
-.listAccesoriosI .item img {
+.listAccesoriosInicio .item img {
     width: 100%;
     filter: drop-shadow(0 10px 20px rgba(153, 152, 152, 0.6));
 }
-.listAccesoriosI{
+.listAccesoriosInicio{
     display: grid;  
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
-.listAccesoriosI .item {
+.listAccesoriosInicio .item {
     background-color: #eeeee6;
     padding: 20px;
     border-radius: 20px;
@@ -92,23 +94,24 @@
     text-align: center;
 }
 
-.listAccesoriosI .item h2 {
+.listAccesoriosInicio .item h2 {
     font-weight: 500;
     font-size: large;
 }
 
-.listAccesoriosI .item .price{
+.listAccesoriosInicio .item .price{
     letter-spacing: 7px;
     font-size: small;
 }
 
-.listAccesoriosI .item button{
+.listAccesoriosInicio .item button{
     background-color: #353432;
     color: #eee;
     padding: 5px 10px;
     border-radius: 20px;
     margin-top: 10px;
     border: none;
+    cursor: pointer;
 }
 
 
