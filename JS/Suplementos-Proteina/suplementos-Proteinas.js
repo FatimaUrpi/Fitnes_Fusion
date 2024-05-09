@@ -5,6 +5,9 @@ let listProteina = [];
 
 const addDataHTMLProteina= () =>{
     listProteinaHTML.innerHTML = '';
+    const tipos = ['Proteina'];
+    tipos.forEach(tipo => {
+    const productosTipo = listProteina.filter(producto => producto.tipo === tipo);
     if(listProteina.length > 0){
         listProteina.forEach(proteinas =>{
             let newProteina = document.createElement('div');
@@ -15,15 +18,15 @@ const addDataHTMLProteina= () =>{
             <div class="price">S/.${proteinas.price}</div>
             <button class="addCard">Comprar</button>`;
             listProteinaHTML.appendChild(newProteina);
-        })
-
+        });
     }
+});
 }
 const initAppProteina = () => {
-    fetch('JS/Suplementos-Proteina/proteinas.json')
+    fetch('./JS/inicio/productos.json')
         .then(response => response.json())
         .then(data => {
-            listProteina = data;
+            listProteina = data.filter(producto => producto.categoria === "Suplementos" && producto.tipo === "Proteina");
             addDataHTMLProteina();
         })
 }

@@ -5,6 +5,9 @@ let listPre = [];
 
 const addDataHTMLPreEntreno= () =>{
     listPreEntrenoHTML.innerHTML = '';
+    const tipos = ['Pre-Entreno'];
+    tipos.forEach(tipo => {
+    const productosTipo = listPre.filter(producto => producto.tipo === tipo);
     if(listPre.length > 0){
         listPre.forEach(pre =>{
             let newPre = document.createElement('div');
@@ -15,15 +18,15 @@ const addDataHTMLPreEntreno= () =>{
             <div class="price">S/.${pre.price}</div>
             <button class="addCard">Comprar</button>`;
             listPreEntrenoHTML.appendChild(newPre);
-        })
-
+        });
     }
+});
 }
 const initAppPreEntreno = () => {
-    fetch('JS/Suplementos-PreEntreno/preEntreno.json')
+    fetch('./JS/inicio/productos.json')
         .then(response => response.json())
         .then(data => {
-            listPre = data;
+            listPre = data.filter(producto => producto.categoria === "Suplementos" && producto.tipo === "Pre-Entreno");
             addDataHTMLPreEntreno();
         })
 }

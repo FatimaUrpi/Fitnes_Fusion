@@ -9,25 +9,25 @@ body {
     font-family: sans-serif;
     background-color: #fff;
 }
-
 /* BARRA DE MENÚ */
 header {
-    width: 100%; /* Mantenemos el ancho al 100% */
-    height: 200px; /* Altura original */
+    width: 100%;
+    height: 200px;
     text-align: center;
+    position: relative;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0; /* Ajustamos el ancho */
-    overflow-x: visible; /* Permitimos el desbordamiento horizontal */
+    overflow: hidden;
     z-index: 9999;
     background-color: #fff;
     transition: background-color 0.15s ease;
+
 }
 
 header:hover {
-    background-color: #fff; 
+    background-color: #fff;
 }
+
 header:hover::after {
     content: '';
     position: absolute;
@@ -38,10 +38,28 @@ header:hover::after {
     z-index: -1;
     transition: opacity 0.10s ease;
 }
-header:hover nav a {
-    color: black;
+
+header nav a {
+    color: rgb(0, 0, 0);
 }
-header nav{
+
+
+header:hover nav a {
+    text-decoration: none;
+
+}
+
+nav a:hover {
+    color: #063970;
+    /* Color al pasar el mouse */
+    font-weight: bold;
+    /* Hacer el texto más grueso */
+
+}
+
+
+
+header nav {
     position: absolute;
     bottom: 0;
     height: 60px;
@@ -49,14 +67,128 @@ header nav{
     width: 100%;
     margin-bottom: 80px;
 }
+
+header nav {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
 nav a {
     color: black;
     display: inline-block;
     padding: 20px 30px;
     line-height: 1;
-    text-decoration: none; 
-    text-align: center;   
+    text-decoration: none;
+    text-align: center;
 }
+
+
+
+/*Logo*/
+.Logo {
+    margin-right: 120px;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.Logo img {
+    width: 180px;
+    height: auto;
+    margin-top: -80px;
+
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 10000;
+    /* Ajusta el valor según sea necesario */
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: max-content; /* Cambiamos esto */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block; /* Cambiamos esto */
+    opacity: 0.5; /* Opacidad predeterminada */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+.dropdown-content a:hover {
+    opacity: 1;
+    /* Opacidad al pasar el mouse */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ffffff;
+}
+
+
+/*MARQUEE -barrita negra de envios gratis */
+.marquee-space {
+    height: 20px;
+}
+
+.marquee {
+    margin-top: 156px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: black;
+    width: 100%;
+}
+
+.marquee-text {
+    display: inline-block;
+    margin-left: 2px;
+    animation: marquee-scroll var(--duration, 7s) linear infinite;
+    color: #fff;
+
+}
+
+
+
+
+.marquee-text:after {
+    content: "📦 Envíos GRATIS  ";
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(2%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
 .carrito {
     width: 20px;
     height: 20px;
@@ -76,94 +208,14 @@ nav a {
 .Logo {
     margin-right: 120px;
     width: 40px; 
-    height: 40px;
+    height: 30px;
     float: left; 
 }
 .Logo img{
     width: 180px;
-    height: auto;
+    height: 160px;
     margin-top: -80px; 
    
-}
-
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 10000; /* Ajusta el valor según sea necesario */
-}
-
-.dropbtn {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    opacity: 0.5; /* Opacidad predeterminada */
-    transition: opacity 0.3s ease; /* Transición suave */
-
-}
-
-.dropdown-content a:hover {
-    opacity: 1; /* Opacidad al pasar el mouse */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #ffffff;
-}
-
-
-
-
-
-/*MARQUEE -barrita negra de envios gratis */
-.marquee-space {
-    height: 20px;
-}
-.marquee {
-    margin-top: 156px;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    background-color: black;
-    width: 100%;
-}
-.marquee-text {
-    display: inline-block;
-    margin-left: 2px;
-    animation: marquee-scroll var(--duration, 7s) linear infinite;
-    color: #fff;
-}
-.marquee-text:after {
-    content: " 📦 Envíos GRATIS  ";
-}
-
-@keyframes marquee-scroll {
-    from {
-        transform: translateX(2%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
 }
 
 
@@ -294,3 +346,57 @@ footer {
     font-size: 1.2rem; 
 }
 
+.buttonSection {
+    width: 120px;
+    height: 40px;
+    background-color: #000; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; 
+}
+
+.buttonSection:hover {
+    background-color: #333; 
+}
+#opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.buttonOpcion {
+    width: 100%;
+    text-align: center;
+    
+}
+
+.buttonOpcion button {
+    margin: 5px;
+    padding: 10px 20px;
+    width: auto;
+    height: 40px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.ver-mas-btn:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+
+.addCard{
+    cursor: pointer;
+}
