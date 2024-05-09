@@ -160,3 +160,11 @@ main {
 .crear-cuenta{
     text-align: center;
 }
+.d-flex{
+    margin-top: 20px;
+    height: 50ch;
+}
+
+.copy-p{
+    margin-top: 20px;
+}

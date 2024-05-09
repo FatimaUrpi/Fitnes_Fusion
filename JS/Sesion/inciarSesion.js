@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             icon: "success"
         }).then(() => {
             // Redirigir a la página de inicio
-            window.location.href = "inicio.html";
+            window.location.href = "Index.html";
         });
     });
 });

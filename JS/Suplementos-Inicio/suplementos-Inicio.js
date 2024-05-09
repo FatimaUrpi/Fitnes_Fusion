@@ -17,7 +17,7 @@ const addDataHTML = () => {
                 <img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
                 <div class="price">S/.${product.price}</div>
-                <button class="addCard">Comprar</button>`;
+                <button onclick="addCart(${product.id})">Comprar</button>`;
                 listProductHTML.appendChild(newProduct);
             });
         }

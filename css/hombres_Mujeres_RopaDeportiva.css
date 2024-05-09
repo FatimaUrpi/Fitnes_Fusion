@@ -6,6 +6,11 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+body {
+    width: 100%;
+    font-family: sans-serif;
+    background-color: #fff;
+}
 
 /* BARRA DE MENÚ */
 header {
@@ -125,7 +130,6 @@ nav a {
     width: max-content; /* Cambiamos esto */
     z-index: 1;
 }
-
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
@@ -213,7 +217,7 @@ nav a {
 /*FOOTER*/
 footer {
 
-    height: 445px;
+    height: 38ch;
     margin-top: 3%;
     background-color: black;
     color: white;
@@ -238,6 +242,8 @@ footer {
 .social-icons {
     display: flex;
     gap: 1.8rem;
+    cursor: pointer;
+
 }
 
 .social-icons span {
@@ -252,6 +258,8 @@ footer {
 .social-icons span i {
     color: #fff;
     font-size: 1.2rem;
+    cursor: pointer;
+
 }
 
 .facebook {
@@ -292,7 +300,7 @@ footer {
      text-align: center;
      bottom: 20;
      left: 0;
-     width:1280px;
+     width:207ch;
      border-top: 1px solid #d2b495;
      margin-top: 20px;
      margin-left: 30px;
@@ -611,4 +619,13 @@ footer {
 
 .product {
     margin: 50px 30px;
+}
+
+.d-flex{
+    margin-top: 20px;
+    height: 50ch;
+}
+
+.copy-p{
+    margin-top: 20px;
 }

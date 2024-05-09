@@ -9,6 +9,7 @@
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
+
 .listRopaDeportiva .item {
     background-color: #eeeee6;
     padding: 20px;
