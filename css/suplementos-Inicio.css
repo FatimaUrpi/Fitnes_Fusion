@@ -232,6 +232,7 @@ footer {
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 3rem;
+    margin-top: 200px;  
 }
 
 .container-categories {
