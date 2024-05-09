@@ -41,3 +41,23 @@ function addCartToHTML(){
     totalQuantityHTML.innerText = totalQuantity;
     totalPriceHTML.innerText = '$' + totalPrice;
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('inicioSesion-form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+        
+        // Aquí puedes agregar tu lógica para guardar los datos en JSON
+        
+        // Luego, muestra la alerta
+        Swal.fire({
+            title: "Compra Exitosa!",
+            text: "Muchas gracias por comprar en FITNESS FUSION!!",
+            icon: "success"
+        }).then(() => {
+            // Redirigir a la página de inicio
+            window.location.href = "Index.html";
+        });
+    });
+});
