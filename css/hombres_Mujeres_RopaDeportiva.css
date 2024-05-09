@@ -125,7 +125,6 @@ nav a {
     width: max-content; /* Cambiamos esto */
     z-index: 1;
 }
-
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
