@@ -242,7 +242,7 @@ footer {
 }
 
 .card-category {
-    height: 20rem;
+    height: 40ch;
     display: flex;
     flex-direction: column;
     align-items: center;
