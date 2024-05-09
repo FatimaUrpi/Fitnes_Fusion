@@ -1,119 +1,50 @@
-let listCartHTML = document.querySelector('.listCart');
-let iconCart = document.querySelector('.icon-cart');
-let iconCartSpan = document.querySelector('.icon-cart span');
-let body = document.querySelector('body');
-let closeCart = document.querySelector('.close');
-let products = [];
-let cart = [];
+let iconCart = document.querySelector('.iconCart');
+let cart = document.querySelector('.cart');
+let container = document.querySelector('.container');
+let close = document.querySelector('.close');
 
-
-iconCart.addEventListener('click', () => {
-    body.classList.toggle('showCart');
-})
-closeCart.addEventListener('click', () => {
-    body.classList.toggle('showCart');
-})
-
-const addToCart = (product_id) => {
-    let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
-    if(cart.length <= 0){
-        cart = [{
-            product_id: product_id,
-            quantity: 1
-        }];
-    }else if(positionThisProductInCart < 0){
-        cart.push({
-            product_id: product_id,
-            quantity: 1
-        });
+iconCart.addEventListener('click', function(){
+    if(cart.style.right == '-100%'){
+        cart.style.right = '0';
+        container.style.transform = 'translateX(-400px)';
     }else{
-        cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
-    }
-    addCartToHTML();
-    addCartToMemory();
-}
-const addCartToMemory = () => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-const addCartToHTML = () => {
-    listCartHTML.innerHTML = '';
-    let totalQuantity = 0;
-    if(cart.length > 0){
-        cart.forEach(item => {
-            totalQuantity = totalQuantity +  item.quantity;
-            let newItem = document.createElement('div');
-            newItem.classList.add('item');
-            newItem.dataset.id = item.product_id;
-
-            let positionProduct = products.findIndex((value) => value.id == item.product_id);
-            let info = products[positionProduct];
-            listCartHTML.appendChild(newItem);
-            newItem.innerHTML = `
-            <div class="image">
-                    <img src="${info.image}">
-                </div>
-                <div class="name">
-                ${info.name}
-                </div>
-                <div class="totalPrice">$${info.price * item.quantity}</div>
-                <div class="quantity">
-                    <span class="minus"><</span>
-                    <span>${item.quantity}</span>
-                    <span class="plus">></span>
-                </div>
-            `;
-        })
-    }
-    iconCartSpan.innerText = totalQuantity;
-}
-
-listCartHTML.addEventListener('click', (event) => {
-    let positionClick = event.target;
-    if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
-        let product_id = positionClick.parentElement.parentElement.dataset.id;
-        let type = 'minus';
-        if(positionClick.classList.contains('plus')){
-            type = 'plus';
-        }
-        changeQuantityCart(product_id, type);
+        cart.style.right = '-100%';
+        container.style.transform = 'translateX(0)';
     }
 })
-const changeQuantityCart = (product_id, type) => {
-    let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
-    if(positionItemInCart >= 0){
-        let info = cart[positionItemInCart];
-        switch (type) {
-            case 'plus':
-                cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
-                break;
-        
-            default:
-                let changeQuantity = cart[positionItemInCart].quantity - 1;
-                if (changeQuantity > 0) {
-                    cart[positionItemInCart].quantity = changeQuantity;
-                }else{
-                    cart.splice(positionItemInCart, 1);
-                }
-                break;
-        }
+close.addEventListener('click', function (){
+    cart.style.right = '-100%';
+    container.style.transform = 'translateX(0)';
+})
+
+let products = null;
+//get data
+fetch('./JS/Inicio/productos.json')
+.then(response => response.json())
+.then(data =>{
+    products = data.filter(producto => producto.categoria === "Suplementos" && producto.tipo === "Creatina");
+    addDataToHTML();
+})
+
+function addDataToHTML(){
+    let listproductHtML = document.querySelector('.listCreatine');
+    listproductHtML.innerHTML = "";
+
+    //add data
+    if(products != null)
+        {
+        products.forEach(products =>{
+            let newProduct = document.createElement('div');
+            newProduct.classList.add('item');
+            newProduct.innerHTML = `
+            <img src="${products.image}" alt="">
+            <h2>${products.name}</h2>
+            <div class="price">S/.${products.price}</div>
+            <button onclick="addCart(${products.id})">Comprar</button>`;
+            listproductHtML.appendChild(newProduct);
+        });
     }
-    addCartToHTML();
-    addCartToMemory();
-}
 
-const initApp = () => {
-    // get data product
-    fetch('./JS/inicio/productos.jsons')
-    .then(response => response.json())
-    .then(data => {
-        products = data;
-        addDataToHTML();
-
-        // get data cart from memory
-        if(localStorage.getItem('cart')){
-            cart = JSON.parse(localStorage.getItem('cart'));
-            addCartToHTML();
-        }
-    })
 }
-initApp();
+/*Lista add */
+
