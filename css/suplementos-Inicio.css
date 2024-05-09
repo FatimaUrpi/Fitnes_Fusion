@@ -226,12 +226,13 @@ footer {
     font-size: 1.2rem; 
 }
 
-/*Categorias*/
+/*Categorias ascascascascsacacascaca*/
 .top-categories {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 3rem;
+    margin-top: 200px;  
 }
 
 .container-categories {

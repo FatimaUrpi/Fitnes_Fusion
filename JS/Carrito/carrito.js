@@ -48,3 +48,27 @@ function addDataToHTML(){
 }
 /*Lista add */
 
+let listCart = [];
+function addCard($idProducto){
+    let productCopy = JSON.parse(JSON.stringify(products));
+    //if this product is not in the cart
+    if(!listCart[$idProducto]){
+        let dataProduct = productCopy.filter(
+            product => product.id ==$idProducto
+        )[0];
+
+        //add data product cart
+        listCart[$idProducto] = dataProduct;
+        listCart[$idProducto] = quatity = 1;
+    }else{
+        //if this product is already in the cart
+        //i just increased the quatity
+        listCart[$idProducto].quatity++;
+
+    }
+    //i will ssav datas cart in cookie
+    //to save this datas cart when i turn th  computer
+    let timeSave = "expire=Thu, 31 Dec 2025 23:59:59 UTC";
+    document.cookie = "listCart=" + JSON.stringify
+}
+
