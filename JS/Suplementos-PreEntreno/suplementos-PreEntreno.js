@@ -1,33 +1,31 @@
+let products = null;
 
-let listPreEntrenoHTML = document.querySelector('.listPreEntreno');
+// Obtener datos de productos
+fetch('./JS/Inicio/productos.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        addDataToHTML();
+    })
 
-let listPre = [];
+// Mostrar productos en HTML
+function addDataToHTML() {
+    let listproductHtML = document.querySelector('.listPreEntreno');
+    listproductHtML.innerHTML = "";
 
-const addDataHTMLPreEntreno= () =>{
-    listPreEntrenoHTML.innerHTML = '';
-    const tipos = ['Pre-Entreno'];
-    tipos.forEach(tipo => {
-    const productosTipo = listPre.filter(producto => producto.tipo === tipo);
-    if(listPre.length > 0){
-        listPre.forEach(pre =>{
-            let newPre = document.createElement('div');
-            newPre.classList.add('item');
-            newPre.innerHTML =`
-            <img src="${pre.image}" alt="">
-            <h2>${pre.name}</h2>
-            <div class="price">S/.${pre.price}</div>
-            <button class="addCard">Comprar</button>`;
-            listPreEntrenoHTML.appendChild(newPre);
+    // Agregar datos
+    if (products != null) {
+        products.forEach(product => {
+            if (product.tipo === "Pre-Entreno") {
+                let newProduct = document.createElement('div');
+                newProduct.classList.add('item');
+                newProduct.innerHTML = `
+                <img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">S/.${product.price}</div>
+                <button onclick="addCart(${product.id})">Comprar</button>`;
+                listproductHtML.appendChild(newProduct);
+            }
         });
     }
-});
 }
-const initAppPreEntreno = () => {
-    fetch('./JS/inicio/productos.json')
-        .then(response => response.json())
-        .then(data => {
-            listPre = data.filter(producto => producto.categoria === "Suplementos" && producto.tipo === "Pre-Entreno");
-            addDataHTMLPreEntreno();
-        })
-}
-initAppPreEntreno();   

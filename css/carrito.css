@@ -22,21 +22,22 @@
     align-items: center;
     transform: translateX(20px);
 }
-.cart{
+.cart {
     color: #fff;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 400px;
-    height: 100vh;
+    position: fixed; /* Establece la posición fija */
+    top: 0; /* Alinea el carrito en la parte superior de la ventana */
+    right: 0; /* Alinea el carrito en el borde derecho de la ventana */
+    width: 400px; /* Establece el ancho del carrito */
+    height: 100vh; /* Establece la altura del carrito al 100% del viewport height */
     background-color: #0e0f11;
     display: grid;
     grid-template-rows: 50px 1fr 50px;
     gap: 20px;
     transition: right 1s;
-    z-index: 1100;
-    right: -100%;
+    z-index: 9999; /* Asegura que el carrito esté por encima de otros elementos */
+    /* right: -100%; */ /* No es necesario establecer right aquí, ya que lo hacemos arriba */
 }
+
 .cart .buttons .checkout{
     background-color: #E8BC0E;
     color: #000;
