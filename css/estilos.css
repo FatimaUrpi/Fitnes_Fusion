@@ -1,7 +1,9 @@
-/* Estilos generales */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
 }
 
 body {
@@ -9,6 +11,7 @@ body {
     font-family: sans-serif;
     background-color: #fff;
 }
+
 /* BARRA DE MENÚ */
 header {
     width: 100%;
@@ -88,7 +91,7 @@ nav a {
 
 
 
-/*Logo*/
+
 .Logo {
     margin-right: 120px;
     width: 40px;
@@ -127,7 +130,6 @@ nav a {
     width: max-content; /* Cambiamos esto */
     z-index: 1;
 }
-
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
@@ -135,6 +137,7 @@ nav a {
     opacity: 0.5; /* Opacidad predeterminada */
     transition: opacity 0.3s ease; /* Transición suave */
 }
+
 .dropdown-content a:hover {
     opacity: 1;
     /* Opacidad al pasar el mouse */
@@ -189,6 +192,8 @@ nav a {
 }
 
 
+/**/
+
 .carrito {
     width: 20px;
     height: 20px;
@@ -196,156 +201,83 @@ nav a {
     margin-top: -10px;
 
 }
+
 .user {
     margin-left: 20px;
     margin-right: 100px;
     width: 40px;
     height: 40px;
     float: right;
-    margin-top: -10px; 
+    margin-top: -10px;
 
 }
-.Logo {
-    margin-right: 120px;
-    width: 40px; 
-    height: 30px;
-    float: left; 
-}
-.Logo img{
-    width: 180px;
-    height: 160px;
-    margin-top: -80px; 
-   
-}
 
 
+ 
 
 
-
-/* Estilos para la sección de productos */
-
-.producto h3 {
-    font-size: 18px; 
-}
-
-
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start; 
-    padding: 20px; 
-}
-
-.producto {
-    width: calc(33.33% - 30px);
-    margin: 15px;
-    box-sizing: border-box;
-}
-
-.producto img {
+.listProduct .item img {
     width: 100%;
-    height: auto;
+    filter: drop-shadow(0 50px 20px #0009);
 }
 
-
-/*FOOTER*/
-footer {
-
-    height: 40ch;
-    margin-top: 3%;
-    background-color: black;
-    color: white;
-    padding: 30px;
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.footer-columns {
-    display: flex;
-}
-
-.footer-column {
-    margin-right: 40px;
-    flex: 1;
-}
-/*Fatimasssssss*/
-
-.footer-column h4 {
-    text-align: left;
-    padding-bottom: 10px;
-    margin-bottom: 10px; 
-}
-
-.social-icons {
-    display: flex;
-    gap: 1.8rem;
-    cursor: pointer;
-}
-
-.social-icons span {
-    border-radius: 45%;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
+.listProduct .item {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
     align-items: center;
-    justify-content: center;
-}
-
-.social-icons span i {
-    color: #fff;
-    font-size: 1.2rem;
-}
-
-.facebook {
-    background-color: #3b5998;
-}
-
-.twitter {
-    background-color: #00acee;
-}
-
-.youtube {
-    background-color: #c4302b;
-}
-
-.pinterest {
-    background-color: #c8232c;
-}
-
-.instagram {
-    background: linear-gradient(
-        #405de6,
-        #833ab4,
-        #c13584,
-        #e1306c,
-        #fd1d1d,
-        #f56040,
-        #fcaf45
-    );
-}
-
-/* Ajustes de estilo para el copyright dentro del footer */
-.footer-content {
-   margin: 20px;
-}
-
-.footer-content .copyright {
-
-    position: absolute;
     text-align: center;
-    bottom: 20;
-    left: 0;
-   /* width:214ch;*/
-    width: 207ch;
-
-    border-top: 1px solid #d2b495;
-    margin-top: 20px;
-    margin-left: 30px;
 }
 
-.footer-content .copyright p {
-    font-weight: 400;
-    font-size: 1.2rem; 
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
 }
+
+.listProduct .item .price {
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+.listProduct .item button {
+    background-color: #353432;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+}
+
+.product {
+    margin: 50px 30px;
+}
+
+/* SLIDER*/
+.anuncio {
+    width: 100%;
+    height: 520px;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 180px;
+    margin-bottom: 50px;
+
+}
+
+.anuncio img {
+    width: 100%;
+    height: 520px;
+
+}
+
+
+
+
 
 .buttonSection {
     width: 120px;
