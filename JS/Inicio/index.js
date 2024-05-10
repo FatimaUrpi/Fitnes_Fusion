@@ -1,96 +1,129 @@
-let listRopaDeportivaHTML = document.querySelector('.listRopaDeportiva');
-let listRopaDeportiva = [];
+let products = null;
 
-const addDataHTMLRopaDeportiva = () => {
-    listRopaDeportivaHTML.innerHTML = '';
-    const tipos = ['polera', 'casaca', 'conjunto'];
-    let totalProductosMostrados = 0;
-    tipos.forEach(tipo => {
-        const productosTipo = listRopaDeportiva.filter(producto => producto.tipo === tipo);
-        if (productosTipo.length > 0) {
-            const productosMostradosPorTipo = Math.min(2, 4 - totalProductosMostrados);
-            productosTipo.slice(0, productosMostradosPorTipo).forEach(producto => {
-                let newProduct = document.createElement('div');
-                newProduct.classList.add('item');
-                newProduct.innerHTML = `
-                <img src="${producto.image}" alt="">
-                <h2>${producto.name}</h2>
-                <div class="price">S/.${producto.price}</div>
-                <button class="addCard">Comprar</button>`;
-                listRopaDeportivaHTML.appendChild(newProduct);
-                totalProductosMostrados++;
-            });
-        }
-    });
-}
+fetch('./JS/Inicio/productos.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        addDataToHTML1();
+        addDataToHTML2();
+        addDataToHTML3();
+    })
 
-const initAppRopaDeportiva = () => {
-    fetch('./JS/inicio/productos.json')
-        .then(response => response.json())
-        .then(data => {
-            listRopaDeportiva = data.filter(producto => producto.categoria === "ropa_deportiva");
-            addDataHTMLRopaDeportiva();
-        })
-}
-initAppRopaDeportiva();
 
-let listSuplementosHTML = document.querySelector('.listSuplementos');
-let listSuplementos = [];
+function addDataToHTML1() {
+    let listproductHtML = document.querySelector('.listRopaDeportiva');
+    listproductHtML.innerHTML = "";
 
-const addDataHTMLSuplementos = () => {
-    listSuplementosHTML.innerHTML = '';
-    if (listSuplementos.length > 0) {
-        listSuplementos.slice(0, 4).forEach(product => {
-            let newProduct = document.createElement('div');
-            newProduct.classList.add('item');
-            newProduct.innerHTML = `
+    // Contadores para cada tipo de producto
+    let poleraCount = 0;
+    let casacaCount = 0;
+    let conjuntoCount = 0;
+
+    // Agregar datos
+    if (products != null) {
+        products.forEach(product => {
+            if (poleraCount < 2 && product.tipo === "polera" && product.genero === "Hombre") {
+                addProduct(product);
+                poleraCount++;
+            } else if (casacaCount < 1 && product.tipo === "casaca" && product.genero === "Hombre") {
+                addProduct(product);
+                casacaCount++;
+            } else if (conjuntoCount < 1 && product.tipo === "conjunto" && product.genero === "Hombre") {
+                addProduct(product);
+                conjuntoCount++;
+            }
+        });
+    }
+
+    // Función auxiliar para agregar un producto al HTML
+    function addProduct(product) {
+        let newProduct = document.createElement('div');
+        newProduct.classList.add('item');
+        newProduct.innerHTML = `
             <img src="${product.image}" alt="">
             <h2>${product.name}</h2>
             <div class="price">S/.${product.price}</div>
-            <button class="addCard">Comprar</button>`;
-            listSuplementosHTML.appendChild(newProduct);
-        });
+            <button onclick="addCart(${product.id})">Comprar</button>`;
+        listproductHtML.appendChild(newProduct);
     }
 }
+   
 
-const initAppSuplementos = () => {
-    fetch('./JS/inicio/productos.json')
-        .then(response => response.json())
-        .then(data => {
-            listSuplementos = data.filter(product => product.categoria === "Suplementos");
-            addDataHTMLSuplementos();
-        })
-}
-initAppSuplementos();
+function addDataToHTML2() {
+    let listproductHtML = document.querySelector('.listSuplementos');
+    listproductHtML.innerHTML = "";
 
-let listAccesoriosHTML = document.querySelector('.listAccesoriosInicio');
-let listAccesorios = [];
+    // Contadores para cada tipo de producto
+    let CreatinaCount = 0;
+    let PreEntrenoCount = 0;
+    let ProteinaCount = 0;
+    let VitaminasCount = 0;
 
-const addDataHTMLAccesorios = () => {
-    listAccesoriosHTML.innerHTML = '';
-    if (listAccesorios.length > 0) {
-        listAccesorios.slice(0,4).forEach(product => {
-            let newProduct = document.createElement('div');
-            newProduct.classList.add('item');
-            newProduct.innerHTML = `
+    // Agregar datos
+    if (products != null) {
+        products.forEach(product => {
+            if (CreatinaCount < 1 && product.tipo === "Creatina") {
+                addProduct(product);
+                CreatinaCount++;
+            } else if (PreEntrenoCount < 1 && product.tipo === "Pre-Entreno") {
+                addProduct(product);
+                PreEntrenoCount++;
+            } else if (ProteinaCount < 1 && product.tipo === "Proteina") {
+                addProduct(product);
+                ProteinaCount++;
+            }else if (VitaminasCount < 1 && product.tipo === "Vitamina") {
+                addProduct(product);
+                VitaminasCount++;
+            }
+        });
+    }
+
+    // Función auxiliar para agregar un producto al HTML
+    function addProduct(product) {
+        let newProduct = document.createElement('div');
+        newProduct.classList.add('item');
+        newProduct.innerHTML = `
             <img src="${product.image}" alt="">
             <h2>${product.name}</h2>
             <div class="price">S/.${product.price}</div>
-            <button class="addCard">Comprar</button>`;
-            listAccesoriosHTML.appendChild(newProduct);
-        });
+            <button onclick="addCart(${product.id})">Comprar</button>`;
+        listproductHtML.appendChild(newProduct);
     }
 }
 
-const initAppAccesorios = () => {
-    fetch('./JS/inicio/productos.json')
-        .then(response => response.json())
-        .then(data => {
-            listAccesorios = data.filter(product => product.categoria === "Accesorios");
-            addDataHTMLAccesorios();
-        })
+
+
+function addDataToHTML3() {
+    let listproductHtML = document.querySelector('.listAccesoriosInicio');
+    listproductHtML.innerHTML = "";
+
+    // Contador para el número total de productos mostrados
+    let productsShown = 0;
+
+    // Agregar datos
+    if (products != null) {
+        products.forEach(product => {
+            if (productsShown < 4 && product.categoria === "Accesorios") {
+                addProduct(product);
+                productsShown++; // Incrementar el contador de productos mostrados
+            }
+        });
+    }
+
+    // Función auxiliar para agregar un producto al HTML
+    function addProduct(product) {
+        let newProduct = document.createElement('div');
+        newProduct.classList.add('item');
+        newProduct.innerHTML = `
+            <img src="${product.image}" alt="">
+            <h2>${product.name}</h2>
+            <div class="price">S/.${product.price}</div>
+            <button onclick="addCart(${product.id})">Comprar</button>`;
+        listproductHtML.appendChild(newProduct);
+    }
 }
-initAppAccesorios();
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     function mostrarOpcionesRopaOcultarVerMas() {
@@ -174,6 +207,39 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("ver-mas-ropa-btn").addEventListener("click", reiniciarTimerRopa);
     document.getElementById("ver-mas-suplementos-btn").addEventListener("click", reiniciarTimerSuplementos);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Función para redirigir a la página de ropa deportiva para hombres
+    document.getElementById("opcion-hombre").addEventListener("click", function() {
+        window.location.href = "hombres-RopaDeportiva.html";
+    });
+
+    // Función para redirigir a la página de ropa deportiva para mujeres
+    document.getElementById("opcion-mujer").addEventListener("click", function() {
+        window.location.href = "Mujeres-RopaDeportiva.html";
+    });
+
+    document.getElementById("opcion-creatina").addEventListener("click", function() {
+        window.location.href = "suplementos-Creatina.html";
+    });
+
+    document.getElementById("opcion-pre-entreno").addEventListener("click", function() {
+        window.location.href = "suplementos-PreEntreno.html";
+    });
+
+    document.getElementById("opcion-proteina").addEventListener("click", function() {
+        window.location.href = "suplementos-Proteina.html";
+    });
+
+    document.getElementById("opcion-vitaminas").addEventListener("click", function() {
+        window.location.href = "suplementos-Vitaminas.html";
+    });
+
+    document.getElementById("ver-mas-accesorios").addEventListener("click", function() {
+        window.location.href = "accesorios.html";
+    });
+});
+
 
 
 
