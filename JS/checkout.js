@@ -1,15 +1,23 @@
 let listCart = [];
-function checkCart(){
-        var cookieValue = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('listCart='));
-        if(cookieValue){
-            listCart = JSON.parse(cookieValue.split('=')[1]);
-        }
+
+function checkCart() {
+    let cartData = localStorage.getItem('listCart');
+    if (cartData) {
+        listCart = JSON.parse(cartData);
+    } else {
+        listCart = [];
+    }
 }
+
+
+function saveCartToCookie() {
+    document.cookie = `listCart=${JSON.stringify(listCart)}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+}
+
 checkCart();
 addCartToHTML();
-function addCartToHTML(){
+
+function addCartToHTML() {
     // clear data default
     let listCartHTML = document.querySelector('.returnCart .list');
     listCartHTML.innerHTML = '';
@@ -19,12 +27,12 @@ function addCartToHTML(){
     let totalQuantity = 0;
     let totalPrice = 0;
     // if has product in Cart
-    if(listCart){
+    if (listCart) {
         listCart.forEach(product => {
-            if(product){
+            if (product) {
                 let newCart = document.createElement('div');
                 newCart.classList.add('item');
-                newCart.innerHTML = 
+                newCart.innerHTML =
                     `<img src="${product.image}">
                     <div class="info">
                         <div class="name">${product.name}</div>
@@ -42,15 +50,15 @@ function addCartToHTML(){
     totalPriceHTML.innerText = '$' + totalPrice;
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('inicioSesion-form');
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
-        
-        // Aquí puedes agregar tu lógica para guardar los datos en JSON
-        
-        // Luego, muestra la alerta
+
+        // Guardar los datos del carrito en las cookies
+        saveCartToCookie();
+
+        // Mostrar la alerta
         Swal.fire({
             title: "Compra Exitosa!",
             text: "Muchas gracias por comprar en FITNESS FUSION!!",
@@ -60,4 +68,9 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = "Index.html";
         });
     });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    checkCart(); // Obtener datos del carrito de las cookies
+    addCartToHTML(); // Mostrar los productos en el carrito en la página de checkout
 });
