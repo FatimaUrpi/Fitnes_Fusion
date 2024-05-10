@@ -62,30 +62,47 @@ function addCartToHTML() {
     listCartHTML.innerHTML = '';
 
     let totalHTML = document.querySelector('.totalQuantity');
+    let checkoutButton = document.querySelector('.checkout'); // Cambiado a 'button' en lugar de 'a'
 
     let totalQuantity = 0;
 
     if (listCart) {
         Object.values(listCart).forEach(product => {
             if (product) {
-                    let newCart = document.createElement('div');
-                    newCart.classList.add('item');
-                    newCart.innerHTML = `
+                let newCart = document.createElement('div');
+                newCart.classList.add('item');
+                newCart.innerHTML = `
                     <img src="${product.image}">
                     <div class="content">
-                    <div class="name">${product.name}</div>
-                    <div class="price">$ ${product.price}</div>
-                <div class="quantity">
-                        <button onclick="changeQuantity(${product.id}, '-')">-</button>
-                        <span class="value">${product.quantity}</span>
-                        <button onclick="changeQuantity(${product.id}, '+')">+</button>
-                    </div>`;
-                    listCartHTML.appendChild(newCart);
-                    totalQuantity = totalQuantity + product.quantity;
+                        <div class="name">${product.name}</div>
+                        <div class="price">$ ${product.price}</div>
+                        <div class="quantity">
+                            <button onclick="changeQuantity(${product.id}, '-')">-</button>
+                            <span class="value">${product.quantity}</span>
+                            <button onclick="changeQuantity(${product.id}, '+')">+</button>
+                        </div>`;
+                listCartHTML.appendChild(newCart);
+                totalQuantity += product.quantity;
             }
-        })
+        });
     }
+
     totalHTML.innerText = totalQuantity;
+
+    // Agregar evento de clic al botón de checkout
+    checkoutButton.addEventListener('click', function() {
+        // Si el totalQuantity es 0, mostrar la alerta
+        if (totalQuantity === 0) {
+            Swal.fire({
+                title: "No ha agregado ningún producto al carrito",
+                text: "Por favor, agregue algún producto",
+                icon: "warning"
+            });
+        } else {
+            // Redirigir a checkout.html si totalQuantity es mayor a 0
+            window.location.href = "checkout.html";
+        }
+    });
 }
 
 // Cambiar la cantidad de un producto en el carrito
