@@ -251,6 +251,7 @@ footer {
     border-radius: 90px;
     margin-top: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .accesorios {

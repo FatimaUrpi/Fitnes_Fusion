@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const nameValue = nameInput.value.trim();
         if (!/^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/.test(nameValue)) {
             Swal.fire({
-                title: "Error",
-                text: "Por favor ingrese un nombre válido.",
+                title: "Error en el nombre",
+                text: "El nombre debe contener solo letras.",
                 icon: "error",
                 confirmButtonText: "OK"
             });
