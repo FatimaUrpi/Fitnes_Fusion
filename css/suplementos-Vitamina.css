@@ -171,6 +171,7 @@ main {
     border-radius: 90px;
     margin-top: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .vitamina {
@@ -178,6 +179,7 @@ main {
 }
 
 .txt{
+    margin-top: 200px;
     text-align: center;
     padding: 10px 200px;
 }

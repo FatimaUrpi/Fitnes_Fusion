@@ -9,10 +9,13 @@ function checkCart() {
     }
 }
 
-
 function saveCartToCookie() {
-    document.cookie = `listCart=${JSON.stringify(listCart)}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+    // Eliminar la cookie
+    document.cookie = 'listCart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    // Eliminar los datos del almacenamiento local
+    localStorage.removeItem('listCart');
 }
+
 
 checkCart();
 addCartToHTML();
@@ -55,20 +58,66 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
 
-        // Guardar los datos del carrito en las cookies
-        saveCartToCookie();
+        // Validar el número de celular
+        const phoneInput = document.getElementById('phone');
+        const phoneValue = phoneInput.value.trim();
 
+        // Agregar una validación para asegurarse de que el número comience con 9
+        if (!phoneValue.startsWith('9') || !/^\d{9}$/.test(phoneValue)) {
+            Swal.fire({
+                title: "Error",
+                text: "Por favor ingrese un número de celular válido que comience con el dígito 9 y tenga 9 dígitos.",
+                icon: "error",
+                confirmButtonText: "OK"
+            });
+            return; // Detener el envío del formulario si la validación falla
+        }
+
+        // Validar el nombre
+        const nameInput = document.getElementById('name');
+        const nameValue = nameInput.value.trim();
+        if (!/^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/.test(nameValue)) {
+            Swal.fire({
+                title: "Error en el nombre",
+                text: "El nombre debe contener solo letras.",
+                icon: "error",
+                confirmButtonText: "OK"
+            });
+            return; // Detener el envío del formulario si la validación falla
+        }
+
+        // Validar la dirección
+        const addressInput = document.getElementById('address');
+        const addressValue = addressInput.value.trim();
+        if (!/^[A-Za-zÁáÉéÍíÓóÚúÑñ\s\d]+$/.test(addressValue)) {
+            Swal.fire({
+                title: "Error",
+                text: "Por favor ingrese una dirección válida.",
+                icon: "error",
+                confirmButtonText: "OK"
+            });
+            return; // Detener el envío del formulario si la validación falla
+        }
+
+        // Si todas las validaciones son exitosas, continuar con el envío del formulario
+        // Guardar los datos del carrito en las cookies y en el almacenamiento local
+        saveCartToCookie();
+        // Reiniciar el carrito
+        listCart = [];
         // Mostrar la alerta
         Swal.fire({
             title: "Compra Exitosa!",
             text: "Muchas gracias por comprar en FITNESS FUSION!!",
-            icon: "success"
+            icon: "success",
+            confirmButtonText: "OK"
         }).then(() => {
             // Redirigir a la página de inicio
             window.location.href = "Index.html";
         });
     });
 });
+
+
 
 window.addEventListener('DOMContentLoaded', function() {
     checkCart(); // Obtener datos del carrito de las cookies
