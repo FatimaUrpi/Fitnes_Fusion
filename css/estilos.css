@@ -1,15 +1,8 @@
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     background-color: rgb(255, 255, 255);
-}
-
-body {
-    width: 100%;
-    font-family: sans-serif;
-    background-color: #fff;
 }
 
 /* BARRA DE MENÚ */
@@ -24,13 +17,10 @@ header {
     z-index: 9999;
     background-color: #fff;
     transition: background-color 0.15s ease;
-
 }
-
 header:hover {
-    background-color: #fff;
+    background-color: #fff; 
 }
-
 header:hover::after {
     content: '';
     position: absolute;
@@ -41,86 +31,55 @@ header:hover::after {
     z-index: -1;
     transition: opacity 0.10s ease;
 }
-
-header nav a {
-    color: rgb(0, 0, 0);
-}
-
-
 header:hover nav a {
-    text-decoration: none;
-
+    color: black;
 }
-
-nav a:hover {
-    color: #063970;
-    /* Color al pasar el mouse */
-    font-weight: bold;
-    /* Hacer el texto más grueso */
-
-}
-
-
-
-header nav {
+header nav{
+    display: flex; /* Convertir los elementos en un contenedor flexible */
+    flex-direction: row; /* Opcional: mostrar elementos en fila (valor por defecto) */
+    justify-content: space-around; /* Alinear elementos horizontalmente */
+    align-items: center; /* Alinear elementos verticalmente */
     position: absolute;
     bottom: 0;
     height: 60px;
-    line-height: 60px;
     width: 100%;
     margin-bottom: 80px;
 }
-
-header nav {
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    line-height: 60px;
-    width: 100%;
-    margin-bottom: 80px;
-}
-
 nav a {
     color: black;
     display: inline-block;
     padding: 20px 30px;
     line-height: 1;
-    text-decoration: none;
-    text-align: center;
+    text-decoration: none; 
+    text-align: center;   
 }
+.carrito {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top: -10px;
 
-
-
-
-.Logo {
-    margin-right: 120px;
+}
+.user {
+    margin-left: 20px;
+    margin-right: 100px;
     width: 40px;
     height: 40px;
-    float: left;
-}
+    float: right;
+    margin-top: -10px; 
 
-.Logo img {
+}
+.Logo {
+    margin-right: 120px;
+    width: 40px; 
+    height: 40px;
+    float: left; 
+}
+.Logo img{
     width: 180px;
     height: auto;
-    margin-top: -80px;
-
-}
-
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 10000;
-    /* Ajusta el valor según sea necesario */
-}
-
-.dropbtn {
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+    margin-top: -80px; 
+   
 }
 
 .dropdown-content {
@@ -130,6 +89,7 @@ nav a {
     width: max-content; /* Cambiamos esto */
     z-index: 1;
 }
+
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
